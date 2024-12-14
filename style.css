@@ -161,6 +161,23 @@ body {
     object-fit: cover;
     align-items: center;
 }
+.carousel-indicators{
+top:99%;
+}
+.carousel-indicators li {
+    background-color: #666;
+    border-radius: 50%; /* Makes the dot a perfect circle */
+    width: 15px; /* Adjust size */
+    height: 15px; /* Keep height and width the same for a circle */
+    margin: 5px;
+    
+}
+
+.carousel-indicators .active {
+    background-color: #007bff; /* Highlight color for the active dot */
+    transform: scale(1.2); /* Slight enlargement for the active indicator */
+}
+
 
 section {
     padding: 0px;

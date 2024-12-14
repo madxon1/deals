@@ -65,3 +65,35 @@ function toggleNav() {
       toggler.innerHTML = '☰'; // Hamburger icon
     }
   }
+
+  //carosel
+  document.addEventListener("DOMContentLoaded", () => {
+    const carouselInner = document.querySelector(".carousel-inner");
+    const items = Array.from(carouselInner.children); // Convert to an array
+
+    // Shuffle function (Fisher-Yates Algorithm)
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    // Shuffle the carousel items
+    shuffle(items);
+
+    // Clear existing elements in the carousel-inner
+    carouselInner.innerHTML = "";
+
+    // Re-add shuffled elements and set the first one as active
+    items.forEach((item, index) => {
+        if (index === 0) {
+            item.classList.add("active"); // Set the first item to active
+        } else {
+            item.classList.remove("active"); // Ensure others are not active
+        }
+        carouselInner.appendChild(item);
+    });
+});
+
+
