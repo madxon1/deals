@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Smooth Scrolling for Navbar Links
-    document.querySelectorAll('.nav-link').forEach(link => {
+    document.querySelectorAll('.nav').forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault(); // Prevent default anchor click behavior
             const targetId = this.getAttribute('href').substring(1); // Get the section ID
@@ -50,3 +50,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+// toggle
+function toggleNav() {
+    const navList = document.getElementById('nav-list');
+    const toggler = document.querySelector('.toggler');
+
+    // Toggle "show" class for visibility
+    navList.classList.toggle('show');
+
+    // Change toggle button text to X when active
+    if (navList.classList.contains('show')) {
+      toggler.innerHTML = '✖'; // Cross icon
+    } else {
+      toggler.innerHTML = '☰'; // Hamburger icon
+    }
+  }

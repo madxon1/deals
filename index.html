@@ -30,32 +30,17 @@
             <div class="hub-text">HUB</div>
         </div>
     </div>
-
-    <!-- Navigation Bar -->   
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Navbar Links Section -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto d-flex flex-row gap-3">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#categories">Category</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<!-- Navigation Bar -->   
+<nav class="navbar">
+    <!-- Toggler Button -->
+    <button class="toggler" onclick="toggleNav()">☰</button>
+    <ul class="nav-list" id="nav-list">
+      <li><a class="nav" href="#home">Home</a></li>
+      <li><a class="nav" href="#categories" >Category</a></li>
+      <li><a class="nav" href="#about">About</a></li>
+      <li><a class="nav" href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
     <!-- Carousel Section -->
     <section id="home">
@@ -186,8 +171,6 @@
         <h3>Connect With Us</h3>
         <p>Have questions or need assistance? We’d love to hear from you! Feel free to reach out to our friendly team and explore all that 3MADZ has to offer.</p>
         <p>Thank you for trusting <strong>3MADZ</strong> as your go-to affiliate agency. Together, let’s make smart shopping simpler!</p>
-        <div class="line"></div>
-        <br>
     </div>
 
     <!-- Contact Us Section -->
@@ -222,7 +205,6 @@
                <!-- Logo -->
                 <div class="footer-logo">
                     <img src="himg/logo1.png" alt="3MADZ Logo">
-                    <p>&reg; 2024 3MADZHUB. All rights reserved.</p>
                 </div>
             </div>
         </div>        

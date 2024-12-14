@@ -21,27 +21,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const scrollPosition = window.scrollY; // Current scroll position
     const viewportHeight = window.innerHeight; // Height of the viewport
     const pageHeight = document.documentElement.scrollHeight; // Total page height
-    const buttonOffset = 400; // Distance above the bottom of the page
+    const buttonVisibilityOffset = 100; // Minimum scroll position to show the button
+    const hideButtonOffset = 450; // Distance from the bottom of the page to hide the button
 
-    // Show or hide the button
-    if (scrollPosition > 100) {
+    // Show the button when scrolling up and hide it when scrolling to the bottom
+    const distanceToBottom = pageHeight - (scrollPosition + viewportHeight);
+
+    if (scrollPosition > buttonVisibilityOffset && distanceToBottom > hideButtonOffset) {
+      // Show the button
       backToTopButton.classList.add("show");
       backToTopButton.classList.remove("hide");
+      backToTopButton.style.position = "fixed"; // Keep the button fixed at the viewport bottom
+      backToTopButton.style.bottom = `10px`;
     } else {
+      // Hide the button
       backToTopButton.classList.add("hide");
       backToTopButton.classList.remove("show");
-    }
-
-    // Adjust the button's position dynamically
-    const distanceToBottom = pageHeight - (scrollPosition + viewportHeight);
-    if (distanceToBottom <= buttonOffset) {
-      // If near the end of the page, stop 200px above the bottom
-      backToTopButton.style.position = "absolute";
-      backToTopButton.style.bottom = `${buttonOffset}px`;
-    } else {
-      // Default behavior (fixed at the viewport bottom)
-      backToTopButton.style.position = "fixed";
-      backToTopButton.style.bottom = `10px`;
+      backToTopButton.style.position = "fixed"; // Ensure it remains in place during hiding
     }
   };
 
@@ -56,3 +52,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+//load More
+document.getElementById('load-more').addEventListener("click", function () {
+  const grid = document.querySelector('.product-grid');
+  grid.classList.toggle('expanded');
+  
+  // Toggle button text
+  if (grid.classList.contains('expanded')) {
+      this.textContent = 'Show Less';
+  } else {
+      this.textContent = 'Load More';
+  }
+});
+
