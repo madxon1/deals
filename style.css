@@ -48,7 +48,7 @@ body {
 /* Navbar Styling */
 .navbar {
     background-color: #24292e;
-    padding: 10px 20px;
+    padding: 5px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,7 +64,7 @@ body {
     list-style: none;
     display: flex; /* Horizontal display */
     transition: all 0.3s ease;
-    margin-left:50px;
+    margin-left:26px;
     justify-content: space-around;
   }
   
@@ -117,14 +117,13 @@ body {
   .toggler {
     position: absolute;
     display: none;
-    background-color: #dddde4;
+    background-color:white;
     color: black;
     border-visibility: hidden;
     font-size: 1.4rem;
     cursor: pointer;
-    padding: 8px 12px;
+    padding: 6px 12px;
     border-radius: 10px;
-    height:50px;
     border-width: 4px;
   }
 
