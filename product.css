@@ -7,6 +7,7 @@
   align-items: flex-start;
   flex-direction: row;
   position: relative;
+  margin:0px;
 }
 
 /* Category Section */
@@ -17,22 +18,21 @@
   justify-content: center; 
 }
 
-.category-section h2 {
-  font-size: 2em;
-  margin-bottom: 10px;
-  color: #333;
-}
+
 
 .category-custom {
-  background-color: #f3d9c7; /* Beige background */
+  background-color:rgb(239, 140, 48); /* Red background */
   color: #333; /* Text color */
   font-size: 30px; /* Font size */
-  padding: 0px 15px; /* Padding for size */
+  padding: 0px 5px; /* Padding for size */
+  margin: 5px 45px; /* Center the button */
   border: none; /* Remove default border */
-  border-radius: 25px; /* Rounded corners */
+  border-radius: 20px; /* Rounded corners */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
-   cursor: pointer; /*Pointer cursor on hover */
+  cursor:default; /*Pointer cursor on hover */
   transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animation on hover */
+  margin-bottom: 10px;
+  display: inline-block;
 }
 
 .category-custom:hover {
@@ -46,17 +46,33 @@
   justify-content: space-around;
   gap: 20px;
   width: 100%;
+  height: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding-bottom: 70px;
   overflow: hidden;
-  max-height: calc(2 * 395.5px + 40px); /* Show only 2 rows (height of 2 product cards + gap) */
+  max-height: calc(2 * 360px + 30px); /* Show only 2 rows (height of 2 product cards + gap) */
   transition: max-height 0.9s ease;
 }
 
-.product-grid.expanded {
-  max-height: none; /* Expand to show all rows */
+.product-grid-1.expanded {
+  max-height: none; 
 }
+.product-grid-2.expanded {
+  max-height: none; 
+}  
+.product-grid-3.expanded {
+  max-height: none; 
+}
+.product-grid-4.expanded {
+  max-height: none; 
+} 
+.product-grid-5.expanded {
+  max-height: none; 
+}
+.product-grid-6.expanded {
+  max-height: none; 
+} 
 
 .product-card {
   background: #fff;
@@ -66,7 +82,12 @@
   width: calc(50% - 15px); /* Two items per row */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   will-change: transform;
-  margin-bottom: 23px;
+  margin-bottom: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 360px;
 }
 
 /* Apply background color to each product grid */
@@ -78,7 +99,7 @@
   background-color: #f9f1; /* White background for odd product grids */
 }
 
-#load-more {
+.load-more {
   display: block;
   margin: 20px auto;
   padding: 10px 20px;
@@ -90,14 +111,14 @@
   font-size: 16px;
 }
 
-#load-more:hover {
+.load-more:hover {
   background-color: #0056b3;
 }
 
 
 
 .product-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(4px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -117,40 +138,52 @@
 
 
 .product-image {
-  width: 100%;
-  height: 200px;
+  img-width: auto;
+  height: 150px;
   object-fit: cover;
+  padding-top:5px;
+ 
 }
 
 .product-info {
-  padding: 15px;
+  padding: 5px;
   text-align: center;
+  flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .product-info h3 {
   font-size: 1.2em;
-  margin: 10px 0;
+  margin: 7px 0;
   color: #333;
 }
 
 .product-info p {
   font-size: 0.9em;
   color: #666;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
-.product-info button {
-  padding: 10px 20px;
+.product-info a {
+  padding: 10px 10px;
   border: none;
   background-color: #28a745;
   color: #fff;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 0.9em;
   transition: background 0.3s ease;
+  margin: 10px 10px;
+  margin-top: auto; 
+  text-decoration: none;
+  color: #fff;
+  margin:0px;
 }
 
-.product-info button:hover {
+
+.product-info a:hover {
   background-color: #218838;
 }
 

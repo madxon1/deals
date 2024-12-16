@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         },
-        { threshold: 0.5 } // Trigger when 50% of the element is visible
+        { threshold: 0.3 } // Trigger when 50% of the element is visible
     );
 
     elements.forEach((el) => observer.observe(el));
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const carouselElement = document.querySelector('#carouselExampleAutoplaying'); // Use the correct carousel ID
     if (carouselElement) {
         const carousel = new bootstrap.Carousel(carouselElement, {
-            interval: 4000, // Set speed to 4 seconds (4000ms)
+            interval: 2000, // Set speed to 4 seconds (4000ms)
             ride: 'carousel' // Auto-start the carousel
         });
 
@@ -46,10 +46,12 @@ document.addEventListener("DOMContentLoaded", () => {
         carouselElement.addEventListener('slid.bs.carousel', () => {
             console.log('Slide transitioned!');
             // Adjust the interval dynamically if needed
-            carousel._config.interval = 4000; // Change to 4 seconds
+            carousel._config.interval = 2000; // Change to 4 seconds
         });
     }
 });
+
+
 // toggle
 function toggleNav() {
     const navList = document.getElementById('nav-list');

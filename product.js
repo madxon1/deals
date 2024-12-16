@@ -55,15 +55,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //load More
-document.getElementById('load-more').addEventListener("click", function () {
-  const grid = document.querySelector('.product-grid');
+document.getElementById('load-more-1').addEventListener("click", function () {
+  const grid = document.querySelector('.product-grid-1');
+
+  // Toggle the expanded class
   grid.classList.toggle('expanded');
-  
+
   // Toggle button text
-  if (grid.classList.contains('expanded')) {
-      this.textContent = 'Show Less';
-  } else {
-      this.textContent = 'Load More';
-  }
+  this.textContent = grid.classList.contains('expanded') ? 'Show Less' : 'Load More';
+});
+
+document.getElementById('load-more-2').addEventListener("click", function () {
+  const grid = document.querySelector('.product-grid-2');
+
+  // Toggle the expanded class
+  grid.classList.toggle('expanded');
+
+  // Toggle button text
+  this.textContent = grid.classList.contains('expanded') ? 'Show Less' : 'Load More';
 });
 
