@@ -1,5 +1,5 @@
 #product {
-  font-family: "Arial", sans-serif;
+  font-family: "Nunito Sans", serif;
   padding: 20px;
   background-color: #f9f2;
   display: flex;
@@ -174,7 +174,7 @@
 }
 
 .product-info h3 {
-  font-size: 1.1em;
+  font-size: 1.11em;
   margin: 7px 0;
   color: #333;
 }
