@@ -168,12 +168,41 @@
       <div class="category-section">
         <!-- /* Fiction */ -->
         <div id="Fiction" class="category-custom">Fiction</div>
+        <div class="pro-categories pro-categories-1">
+          <button class="active" onclick="filterProducts1('all-1')">All</button>
+          <button onclick="filterProducts1('Literary')">Literary</button>
+          <button onclick="filterProducts1('Mystery')">Mystery</button>
+          <button onclick="filterProducts1('Romance')">Romance</button>
+          <button onclick="filterProducts1('Fantasy')">Fantasy</button>
+          <button onclick="filterProducts1('Science')">Science</button>
+          <button onclick="filterProducts1('Horror')">Horror</button>
+          <button onclick="filterProducts1('Contemporary')">
+            Contemporary
+          </button>
+        </div>
         <div class="product-grid product-grid-1">
-          <!-- Mystery -->
-          <div class="product-card">
+          <!-- Literary -->
+          <div class="product-card product-card-1" data-category="Literary">
             <img
               class="product-image"
-              src="bimg/The Bandit Queens.jpg"
+              src="bimg/fiction/To Kill a Mockingbird.jpg"
+              alt="To Kill a Mockingbird"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>To Kill a Mockingbird</h3>
+              <p>
+                Harper Lee's classic explores justice, racism, and morality in
+                the racially divided American South.
+              </p>
+              <a href="https://amzn.to/41KC2iE">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Mystery -->
+          <div class="product-card product-card-1" data-category="Mystery">
+            <img
+              class="product-image"
+              src="bimg/fiction/The Bandit Queens.jpg"
               alt="The Bandit Queens"
               loading="lazy"
             />
@@ -186,43 +215,11 @@
               <a href="https://amzn.to/4giOrz4">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card">
-            <img
-              class="product-image"
-              src="bimg/The Widows of Malabar Hill.jpg"
-              alt="The Widows of Malabar Hill"
-              loading="lazy"
-            />
-            <div class="product-info">
-              <h3>The Widows of Malabar Hill</h3>
-              <p>
-                A historical mystery featuring india's first female lawyer
-                solving case in 1920s Bombay .
-              </p>
-              <a href="https://amzn.to/4iAoVXu">Click to Shop</a>
-            </div>
-          </div>
-          <div class="product-card">
-            <img
-              class="product-image"
-              src="bimg/Chasing The Monsoon.jpg"
-              alt="Chasing The Monsoon"
-              loading="lazy"
-            />
-            <div class="product-info">
-              <h3>Chasing The Monsoon</h3>
-              <p>
-                Apsychological thriller set in Bengaluru involving a detective
-                on the trail of a serial killer.
-              </p>
-              <a href="https://amzn.to/3OWiU9V">Click to Shop</a>
-            </div>
-          </div>
           <!-- Romance -->
-          <div class="product-card">
+          <div class="product-card product-card-1" data-category="Romance">
             <img
               class="product-image"
-              src="bimg/The Midnight Library.jpg"
+              src="bimg/fiction/The Midnight Library.jpg"
               alt="The Midnight Library"
               loading="lazy"
             />
@@ -236,10 +233,10 @@
             </div>
           </div>
           <!-- Fantasy -->
-          <div class="product-card">
+          <div class="product-card product-card-1" data-category="Fantasy">
             <img
               class="product-image"
-              src="bimg/Calcutta Chromosome.jpg"
+              src="bimg/fiction/Calcutta Chromosome.jpg"
               alt="Calcutta Chromosome"
               loading="lazy"
             />
@@ -252,27 +249,45 @@
               <a href="https://amzn.to/49Cj146">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card">
+          <!-- Science -->
+          <div class="product-card product-card-1" data-category="Science">
             <img
               class="product-image"
-              src="bimg/I Hear You.jpg"
-              alt="I Hear You"
+              src="bimg/fiction/Dune.jpg"
+              alt="Dune"
               loading="lazy"
             />
             <div class="product-info">
-              <h3>I Hear You</h3>
+              <h3>Dune</h3>
               <p>
-                A psychological thriller with elements of science fiction
-                involving a genetically altered foetuswith superpowers.
+                Frank Herbert's epic explores power, politics, and survival on a
+                desert planet ruled by spice.
               </p>
-              <a href="https://amzn.to/3ZVDJZe">Click to Shop</a>
+              <a href="https://amzn.to/4iYLJjY">Click to Shop</a>
             </div>
           </div>
-          <!-- Young Adult  -->
-          <div class="product-card">
+          <!-- Horror -->
+          <div class="product-card product-card-1" data-category="Horror">
             <img
               class="product-image"
-              src="bimg/Wake Up, Life is Calling.jpg"
+              src="bimg/fiction/It.jpg"
+              alt="It"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>It</h3>
+              <p>
+                Stephen King's chilling tale of friendship and fear follows a
+                group facing an ancient evil in their hometown.
+              </p>
+              <a href="https://amzn.to/3BsAMX2">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Contemporary  -->
+          <div class="product-card product-card-1" data-category="Contemporary">
+            <img
+              class="product-image"
+              src="bimg/fiction/Wake Up, Life is Calling.jpg"
               alt="Wake Up, Life is Calling"
               loading="lazy"
             />
@@ -285,16 +300,109 @@
               <a href="https://amzn.to/3ZVDJZe">Click to Shop</a>
             </div>
           </div>
-        </div>
-        <button id="load-more-1" class="load-more">More Books...</button>
-        <!-- /* Non-Fiction */ -->
-        <div id="Non-Fiction" class="category-custom">Non-Fiction</div>
-        <div class="product-grid product-grid-2">
-          <!-- Biography -->
-          <div class="product-card">
+          <!-- 2nd Round -->
+          <div class="product-card product-card-1" data-category="Literary">
             <img
               class="product-image"
-              src="bimg/Homeless.jpg"
+              src="bimg/fiction/The Road.jpg"
+              alt="The Road"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>The Road</h3>
+              <p>
+                Cormac McCarthy's haunting tale follows a father and son
+                struggling to survive in a bleak, post-apocalyptic world.
+              </p>
+              <a href="https://amzn.to/4iKVAtr">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-1" data-category="Mystery">
+            <img
+              class="product-image"
+              src="bimg/fiction/The Widows of Malabar Hill.jpg"
+              alt="The Widows of Malabar Hill"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>The Widows of Malabar Hill</h3>
+              <p>
+                A historical mystery featuring india's first female lawyer
+                solving case in 1920s Bombay .
+              </p>
+              <a href="https://amzn.to/4iAoVXu">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-1" data-category="Fantasy">
+            <img
+              class="product-image"
+              src="bimg/fiction/I Hear You.jpg"
+              alt="I Hear You"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>I Hear You</h3>
+              <p>
+                A psychological thriller with elements of science fiction
+                involving a genetically altered foetuswith superpowers.
+              </p>
+              <a href="https://amzn.to/3ZVDJZe">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-1" data-category="Science">
+            <img
+              class="product-image"
+              src="bimg/fiction/A Brief History Of Time.jpg"
+              alt="A Brief History Of Time"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>A Brief History Of Time</h3>
+              <p>
+                Explains time, space, and the universe, simplifying complex
+                concepts for curious minds.
+              </p>
+              <a href="https://amzn.to/3BJEbRd">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-1" data-category="Mystery">
+            <img
+              class="product-image"
+              src="bimg/fiction/Cut Like Wound.jpg"
+              alt="Cut Like Wound"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Cut Like Wound</h3>
+              <p>
+                Apsychological thriller set in Bengaluru involving a detective
+                on the trail of a serial killer.
+              </p>
+              <a href="https://amzn.to/3OWiU9V">Click to Shop</a>
+            </div>
+          </div>
+        </div>
+        <button id="load-more-1" class="load-more product-card-1">
+          More Books...
+        </button>
+        <!-- /* Non-Fiction */ -->
+        <div id="Non-Fiction" class="category-custom">Non-Fiction</div>
+        <div class="pro-categories pro-categories-2">
+          <button class="active" onclick="filterProducts2('all-2')">All</button>
+          <button onclick="filterProducts2('Biographies')">Biographies</button>
+          <button onclick="filterProducts2('Memoirs')">Memoirs</button>
+          <button onclick="filterProducts2('Self-Help')">Self-Help</button>
+          <button onclick="filterProducts2('Business')">Business</button>
+          <button onclick="filterProducts2('Historical')">Historical</button>
+          <button onclick="filterProducts2('Travel')">Travel</button>
+          <button onclick="filterProducts2('True Crime')">True Crime</button>
+        </div>
+        <div class="product-grid product-grid-2">
+          <!-- Biographyies-->
+          <div class="product-card product-card-2" data-category="Biographies">
+            <img
+              class="product-image"
+              src="bimg/non-fic/Homeless.jpg"
               alt="Homeless"
               loading="lazy"
             />
@@ -307,98 +415,11 @@
               <a href="https://amzn.to/404vVot">Click to Shop</a>
             </div>
           </div>
-          <!-- History -->
-          <div class="product-card">
+          <!-- Memoirs-->
+          <div class="product-card product-card-2" data-category="Memoirs">
             <img
               class="product-image"
-              src="bimg/The Indian Metropolis.jpg"
-              alt="The Indian Metropolis"
-              loading="lazy"
-            />
-            <div class="product-info">
-              <h3>Indian metropolis</h3>
-              <p>
-                A critique of urban ddevelopment in india, highlighting
-                human-centric solutions.
-              </p>
-              <a href="https://amzn.to/3ZBiSJx">Click to Shop</a>
-            </div>
-          </div>
-          <!-- Self-Help -->
-          <div class="product-card">
-            <img
-              class="product-image"
-              src="bimg/Atomic Habits.jpg"
-              alt="Atomic Habits"
-              loading="lazy"
-            />
-            <div class="product-info">
-              <h3>Atomic Habits</h3>
-              <p>
-                A globally trending book on building good habits and habits and
-                breaking bad ones.
-              </p>
-              <a href="https://amzn.to/3Dgg2Ch">Click to Shop</a>
-            </div>
-          </div>
-          <div class="product-card">
-            <img
-              class="product-image"
-              src="bimg/The Psychology of Money.jpg"
-              alt="The Psychology of Money"
-              loading="lazy"
-            />
-            <div class="product-info">
-              <h3>The Psychology of Money</h3>
-              <p>
-                It examines how emotions and behaviors shape financial decisions
-                and success.
-              </p>
-              <a href="https://amzn.to/4gAwfRc">Click to Shop</a>
-            </div>
-          </div>
-          <div class="product-card">
-            <img
-              class="product-image"
-              src="bimg/LIGHT FROM MANY LAMPS.jpg"
-              alt="Light from many Lamps"
-              loading="lazy"
-            />
-            <div class="product-info">
-              <h3>Light from many Lamps</h3>
-              <p>
-                A collection of wisdom and stories offering inspiring personal
-                growth and resilience.
-              </p>
-              <a href="https://amzn.to/48KxYAw">Click to Shop</a>
-            </div>
-          </div>
-          <!-- Travel -->
-          <div class="product-card">
-            <img
-              class="product-image"
-              src="bimg/Chasing The Monsoon.jpg"
-              alt="Chasing The Monsoon"
-              loading="lazy"
-            />
-            <div class="product-info">
-              <h3>Chasing The Monsoon</h3>
-              <p>
-                A classic exploration of India's monsoon season and its cultural
-                significance.
-              </p>
-              <a href="https://amzn.to/3Bv3PJi">Click to Shop</a>
-            </div>
-          </div>
-        </div>
-        <button id="load-more-2" class="load-more">More Books...</button>
-        <!-- /* Poetry */ -->
-        <div id="Poetry" class="category-custom">Poetry</div>
-        <div class="product-grid product-grid-3">
-          <div class="product-card">
-            <img
-              class="product-image"
-              src="bimg/Writing Fire.jpg"
+              src="bimg/non-fic/Writing Fire.jpg"
               alt="Writing Fire"
               loading="lazy"
             />
@@ -411,10 +432,192 @@
               <a href="https://amzn.to/3ZRs8dM">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card">
+          <!-- Self-Help -->
+          <div class="product-card product-card-2" data-category="Self-Help">
             <img
               class="product-image"
-              src="bimg/Rain Clouds.jpg"
+              src="bimg/non-fic/Atomic Habits.jpg"
+              alt="Atomic Habits"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Atomic Habits</h3>
+              <p>
+                A globally trending book on building good habits and habits and
+                breaking bad ones.
+              </p>
+              <a href="https://amzn.to/3Dgg2Ch">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Business-->
+          <div class="product-card product-card-2" data-category="Business">
+            <img
+              class="product-image"
+              src="bimg/non-fic/Rich Dad Poor Dad.jpg "
+              alt="Rich Dad Poor Dad"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Rich Dad Poor Dad</h3>
+              <p>
+                Robert T. Kiyosaki's guide contrasts the mindsets of the wealthy
+                and middle class for financial success.
+              </p>
+              <a href="https://amzn.to/4gsbJlX">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Historical -->
+          <div class="product-card product-card-2" data-category="Historical">
+            <img
+              class="product-image"
+              src="bimg/non-fic/The Indian Metropolis.jpg"
+              alt="The Indian Metropolis"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Indian metropolis</h3>
+              <p>
+                A critique of urban ddevelopment in india, highlighting
+                human-centric solutions.
+              </p>
+              <a href="https://amzn.to/3ZBiSJx">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Travel -->
+          <div class="product-card product-card-2" data-category="Travel">
+            <img
+              class="product-image"
+              src="bimg/non-fic/Chasing The Monsoon.jpg"
+              alt="Chasing The Monsoon"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Chasing The Monsoon</h3>
+              <p>
+                A classic exploration of India's monsoon season and its cultural
+                significance.
+              </p>
+              <a href="https://amzn.to/3Bv3PJi">Click to Shop</a>
+            </div>
+          </div>
+          <!-- True Crime -->
+          <div class="product-card product-card-2" data-category="True Crime">
+            <img
+              class="product-image"
+              src="bimg/non-fic/In Cold Blood.jpg"
+              alt="In Cold Blood"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>In Cold Blood</h3>
+              <p>
+                Truman Capote’s true crime masterpiece details the brutal murder
+                of a family and its chilling aftermath.
+              </p>
+              <a href="https://amzn.to/3BIxiQa">Click to Shop</a>
+            </div>
+          </div>
+          <!-- 2nd Round -->
+          <div class="product-card product-card-2" data-category="Memoirs">
+            <img
+              class="product-image"
+              src="bimg/non-fic/Educated.jpg"
+              alt="Educated"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Educated</h3>
+              <p>
+                Tara Westover’s memoir chronicles her struggle to escape a
+                strict, isolated upbringing for education.
+              </p>
+              <a href="https://amzn.to/4iFwWKG">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-2" data-category="Self-Help">
+            <img
+              class="product-image"
+              src="bimg/non-fic/The Psychology of Money.jpg"
+              alt="The Psychology of Money"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>The Psychology of Money</h3>
+              <p>
+                It examines how emotions and behaviors shape financial decisions
+                and success.
+              </p>
+              <a href="https://amzn.to/4gAwfRc">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-2" data-category="Self-Help">
+            <img
+              class="product-image"
+              src="bimg/non-fic/LIGHT FROM MANY LAMPS.jpg"
+              alt="Light from many Lamps"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Light from many Lamps</h3>
+              <p>
+                A collection of wisdom and stories offering inspiring personal
+                growth and resilience.
+              </p>
+              <a href="https://amzn.to/48KxYAw">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-2" data-category="Self-Help">
+            <img
+              class="product-image"
+              src="bimg/non-fic/Mark Manson Boxset.jpg"
+              alt="Mark Manson Boxset"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Mark Manson's</h3>
+              <p>
+                *Everything is F*cked* and *The Subtle Art of Not Giving a F*ck*
+                teach embracing discomfort and prioritizing what matters.
+              </p>
+              <a href="https://amzn.to/4iYVJK2">Click to Shop</a>
+            </div>
+          </div>
+        </div>
+        <button id="load-more-2" class="load-more product-card-2">
+          More Books...
+        </button>
+        <!-- /* Poetry */ -->
+        <div id="Poetry" class="category-custom">Poetry</div>
+        <div class="pro-categories pro-categories-3">
+          <button class="active" onclick="filterProducts3('all-3')">All</button>
+          <button onclick="filterProducts3('Narrative')">Narrative</button>
+          <button onclick="filterProducts3('Lyric')">Lyric</button>
+          <button onclick="filterProducts3('Free Verse')">Free Verse</button>
+          <button onclick="filterProducts3('Spoken Word')">Spoken Word</button>
+        </div>
+        <div class="product-grid product-grid-3">
+          <!-- Narrative -->
+          <div class="product-card product-card-3" data-category="Narrative">
+            <img
+              class="product-image"
+              src="bimg/poetry/Odyssey.jpg"
+              alt="Odyssey"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Odyssey</h3>
+              <p>
+                Homer’s epic tale follows a hero’s long journey home, facing
+                trials, adventures, and challenges.
+              </p>
+              <a href="https://amzn.to/4iYPR3s">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Lyric -->
+          <div class="product-card product-card-3" data-category="Lyric">
+            <img
+              class="product-image"
+              src="bimg/poetry/Rain Clouds.jpg"
               alt="Rain Clouds"
               loading="lazy"
             />
@@ -427,14 +630,182 @@
               <a href="https://amzn.to/3OU1zi3">Click to Shop</a>
             </div>
           </div>
-        </div>
-        <!-- /* Graphic Navel */ -->
-        <div id="Graphic Navel" class="category-custom">Graphic Navel</div>
-        <div class="product-grid product-grid-4">
-          <div class="product-card">
+          <!-- Free Verse -->
+          <div class="product-card product-card-3" data-category="Free Verse">
             <img
               class="product-image"
-              src="bimg/Priya's Shakti.jpg"
+              src="bimg/poetry/Song of Myself.jpg"
+              alt="Song of Myself"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Song of Myself</h3>
+              <p>
+                Walt Whitman celebrates individuality, self-expression, and the
+                beauty of life in his poetry.
+              </p>
+              <a href="https://amzn.to/3P8ni5H">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Spoken Word -->
+          <div class="product-card product-card-3" data-category="Spoken Word">
+            <img
+              class="product-image"
+              src="bimg/poetry/The Hill We Climb.jpg"
+              alt="The Hill We Climb"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>The Hill We Climb</h3>
+              <p>
+                A powerful poem by Amanda Gorman, reflecting hope, unity, and
+                resilience in challenging times.
+              </p>
+              <a href="https://amzn.to/4gNnYJK">Click to Shop</a>
+            </div>
+          </div>
+          <!-- 2nd Round -->
+          <div class="product-card product-card-3" data-category="Narrative">
+            <img
+              class="product-image"
+              src="bimg/poetry/The Rime of the Ancient Mariner.jpg"
+              alt="The Rime of the Ancient Mariner"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>The Rime of the Ancient Mariner</h3>
+              <p>
+                A haunting tale of a sailor's curse and redemption, exploring
+                themes of guilt and nature by Coleridge.
+              </p>
+              <a href="https://amzn.to/3P5tMm7">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-3" data-category="Lyric">
+            <img
+              class="product-image"
+              src="bimg/poetry/Sonnet 18.jpg"
+              alt="Sonnet 18"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Sonnet 18</h3>
+              <p>
+                A timeless reflection on beauty and love, exploring immortality
+                through poetry by William Shakespeare.
+              </p>
+              <a href="https://amzn.to/41KMCGE">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-3" data-category="Free Verse">
+            <img
+              class="product-image"
+              src="bimg/poetry/The Waste Land.jpg"
+              alt="The Waste Land"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>The Waste Land</h3>
+              <p>
+                A modernist exploration of disillusionment and fragmentation in
+                post-war society by I. Johnson Stephen.
+              </p>
+              <a href="https://amzn.to/4gqv1s2">Click to Shop</a>
+            </div>
+          </div>
+          <!-- 3rd Round -->
+          <div class="product-card product-card-3" data-category="Lyric">
+            <img
+              class="product-image"
+              src="bimg/poetry/Ode to a Nightingale.jpg"
+              alt="Ode to a Nightingale"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Ode to a Nightingale</h3>
+              <p>
+                A lyrical reflection on mortality and the transcendent power of
+                art, by John Keats.
+              </p>
+              <a href="https://amzn.to/4fvfFks">Click to Shop</a>
+            </div>
+          </div>
+          <!-- 4th Round -->
+          <div class="product-card product-card-3" data-category="Lyric">
+            <img
+              class="product-image"
+              src="bimg/poetry/An Elegy Written in a Country Churchyard.jpg"
+              alt="An Elegy Written in a Country Churchyard"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>An Elegy Written in a Country Churchyard</h3>
+              <p>
+                A reflective poem on death, life, the virtues of common folk, by
+                Thomas Gray.
+              </p>
+              <a href="https://amzn.to/3VOXdMO">Click to Shop</a>
+            </div>
+          </div>
+        </div>
+        <button id="load-more-3" class="load-more product-card-3">
+          More Books...
+        </button>
+        <!-- /* Graphic Navel */ -->
+        <div id="Graphic Navel" class="category-custom">Graphic Navel</div>
+        <div class="pro-categories pro-categories-4">
+          <button class="active" onclick="filterProducts4('all-4')">All</button>
+          <button onclick="filterProducts4('Superhero')">Superhero</button>
+          <button onclick="filterProducts4('Manga')">Manga</button>
+          <button onclick="filterProducts4('Fantasy')">Fantasy</button>
+          <button onclick="filterProducts4('Sci-Fi')">Sci-Fi</button>
+          <button onclick="filterProducts4('Drama')">Drama</button>
+          <button onclick="filterProducts4('Horror')">Horror</button>
+          <button onclick="filterProducts4('Biographical')">
+            Biographical
+          </button>
+          <button onclick="filterProducts4('Comedy')">Comedy</button>
+        </div>
+        <div class="product-grid product-grid-4">
+          <!-- Superhero -->
+          <div class="product-card product-card-4" data-category="Superhero">
+            <img
+              class="product-image"
+              src="bimg/graphic/The Amazing Spider-Man.jpg"
+              alt="The Amazing Spider-Man"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>The Amazing Spider-Man</h3>
+              <p>
+                A thrilling superhero story of Peter Parker's journey, struggle,
+                and growth, by Stan Lee.
+              </p>
+              <a href="https://amzn.to/3BJgMiN">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Manga -->
+          <div class="product-card product-card-4" data-category="Manga">
+            <img
+              class="product-image"
+              src="bimg/graphic/Naruto + Demonslayer.jpg"
+              alt="Naruto + Demonslayer"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Naruto+Demonslayer</h3>
+              <p>
+                An action-packed manga blending demon-slaying + ninja
+                adventures, by Masashi Kishimoto and Koyoharu Gotouge.
+              </p>
+              <a href="https://amzn.to/4iOStAH">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Fantasy -->
+          <div class="product-card product-card-4" data-category="Fantasy">
+            <img
+              class="product-image"
+              src="bimg/graphic/Naruto + Demonslayer.jpg"
               alt="Priya's Shakti"
               loading="lazy"
             />
@@ -447,26 +818,62 @@
               <a href="https://amzn.to/41BJ7Ce">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card">
+          <!-- Sci-Fi -->
+          <div class="product-card product-card-4" data-category="Sci-Fi">
             <img
               class="product-image"
-              src="bimg/Tinkle Single Digest.jpg"
-              alt="Tinkle Digest"
+              src="bimg/graphic/Saga.jpg"
+              alt="Saga"
               loading="lazy"
             />
             <div class="product-info">
-              <h3>Tinkle Digest</h3>
+              <h3>Saga</h3>
               <p>
-                A delightful mix of stories, comics, and features that entertain
-                and educate readers of all ages.
+                An epic space opera blending fantasy and science fiction,
+                exploring family and conflict, by Brian K. Vaughan.
               </p>
-              <a href="https://amzn.to/4iEqhQQ">Click to Shop</a>
+              <a href="https://amzn.to/3VQR0Qm">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card">
+          <!-- Dramma -->
+          <div class="product-card product-card-4" data-category="Drama">
             <img
               class="product-image"
-              src="bimg/Chanakya.jpg"
+              src="bimg/graphic/Blankets.jpg"
+              alt="Blankets"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Blankets</h3>
+              <p>
+                A poignant graphic novel exploring family, faith, and
+                self-discovery, by Craig Thompson.
+              </p>
+              <a href="https://amzn.to/3VOZHe6">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Horror -->
+          <div class="product-card product-card-4" data-category="Horror">
+            <img
+              class="product-image"
+              src="bimg/graphic/Locke & Key.jpg"
+              alt="Locke & Key"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Locke & Key</h3>
+              <p>
+                A dark, thrilling story of mystery and supernatural keys,
+                blending family and horror, by Joe Hill.
+              </p>
+              <a href="https://amzn.to/49TJKJp">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Biographical -->
+          <div class="product-card product-card-4" data-category="Biographical">
+            <img
+              class="product-image"
+              src="bimg/graphic/Chanakya.jpg"
               alt="Chanakya"
               loading="lazy"
             />
@@ -479,14 +886,195 @@
               <a href="https://amzn.to/41DIeZR">Click to Shop</a>
             </div>
           </div>
-        </div>
-        <!-- /* Plays */ -->
-        <div id="Plays" class="category-custom">Plays</div>
-        <div class="product-grid product-grid-5">
-          <div class="product-card">
+          <!-- Comedy -->
+          <div class="product-card product-card-4" data-category="Comedy">
             <img
               class="product-image"
-              src="bimg/GIRISH KARNAD.jpg"
+              src="bimg/graphic/Tinkle Single Digest.jpg"
+              alt="Tinkle Digest"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Tinkle Digest</h3>
+              <p>
+                A delightful mix of stories, comics, and features that entertain
+                and educate readers of all ages.
+              </p>
+              <a href="https://amzn.to/4iEqhQQ">Click to Shop</a>
+            </div>
+          </div>
+          <!-- 2nd Round -->
+          <div class="product-card product-card-4" data-category="Superhero">
+            <img
+              class="product-image"
+              src="bimg/graphic/Watchman.jpg"
+              alt="Watchman"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Watchman</h3>
+              <p>
+                A gritty, complex tale of heroes, morality, and power,
+                deconstructing the superhero genre, by Alan Moore.
+              </p>
+              <a href="https://amzn.to/405noBs">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-4" data-category="Manga">
+            <img
+              class="product-image"
+              src="bimg/graphic/Death Note.jpg"
+              alt="Death Note"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Death Note</h3>
+              <p>
+                A psychological thriller about justice and power, where a
+                student wields a deadly notebook, by Takeshi Obata.
+              </p>
+              <a href="https://amzn.to/41N9epU">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-4" data-category="Fantasy">
+            <img
+              class="product-image"
+              src="bimg/graphic/Amulet.jpg"
+              alt="Amulet"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Amulet</h3>
+              <p>
+                A captivating fantasy about a young girl discovering a mystical
+                world to save her family, by Kazu Kibuishi.
+              </p>
+              <a href="https://amzn.to/49THMsv">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-4" data-category="Biographical">
+            <img
+              class="product-image"
+              src="bimg/graphic/Maus.jpg"
+              alt="Maus"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Maus</h3>
+              <p>
+                A graphic novel depicting the Holocaust through the lens of
+                animal allegories, by Art Spiegelman.
+              </p>
+              <a href="https://amzn.to/41MzvVl">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-4" data-category="Comedy">
+            <img
+              class="product-image"
+              src="bimg/graphic/Scott Pilgrim.jpg"
+              alt="Scott Pilgrim"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Scott Pilgrim</h3>
+              <p>
+                A quirky, action-packed tale of love and battles against evil
+                exes, by Bryan Lee O'Malley.
+              </p>
+              <a href="https://amzn.to/3ZUOnP4">Click to Shop</a>
+            </div>
+          </div>
+        </div>
+        <button id="load-more-4" class="load-more product-card-4">
+          More Books...
+        </button>
+        <!-- /* Plays */ -->
+        <div id="Plays" class="category-custom">Plays</div>
+        <div class="pro-categories pro-categories-5">
+          <button class="active" onclick="filterProducts5('all-5')">All</button>
+          <button onclick="filterProducts5('Tragedy')">Tragedy</button>
+          <button onclick="filterProducts5('Comedy')">Comedy</button>
+          <button onclick="filterProducts5('Drama')">Drama</button>
+          <button onclick="filterProducts5('Tragicomedy')">Tragicomedy</button>
+          <button onclick="filterProducts5('Historical')">Historical</button>
+          <button onclick="filterProducts5('Musical')">Musical</button>
+          <button onclick="filterProducts5('Absurdist')">Absurdist</button>
+          <button onclick="filterProducts5('Morality')">Morality</button>
+        </div>
+        <div class="product-grid product-grid-5">
+          <!-- Tragedy -->
+          <div class="product-card product-card-5" data-category="Tragedy">
+            <img
+              class="product-image"
+              src="bimg/play/Hamlet.jpg"
+              alt="Hamlet"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Hamlet</h3>
+              <p>
+                A tragedy exploring revenge, madness, and moral corruption, by
+                William Shakespeare.
+              </p>
+              <a href="https://amzn.to/4fsw8pH">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Comedy -->
+          <div class="product-card product-card-5" data-category="Comedy">
+            <img
+              class="product-image"
+              src="bimg/play/A Midsummer Night's Dream.jpg"
+              alt="A Midsummer Night's Dream"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>A Midsummer Night's Dream</h3>
+              <p>
+                A whimsical comedy of love, magic, and mistaken identities, by
+                William Shakespeare.
+              </p>
+              <a href="https://amzn.to/4gpv3A9">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Drama -->
+          <div class="product-card product-card-5" data-category="Drama">
+            <img
+              class="product-image"
+              src="bimg/play/Death of A Salesman.jpg"
+              alt="Death of A Salesman"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Death of A Salesman</h3>
+              <p>
+                A powerful tragedy about the American Dream, family, and
+                personal failure, by Arthur Miller.
+              </p>
+              <a href="https://amzn.to/4iYV5MC">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Tragicomedy -->
+          <div class="product-card product-card-5" data-category="Tragicomedy">
+            <img
+              class="product-image"
+              src="bimg/play/The Winter's Tale.jpg"
+              alt="The Winter's Tale"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>The Winter's Tale</h3>
+              <p>
+                A tragicomedy of jealousy, redemption, and the power of time, by
+                William Shakespeare.
+              </p>
+              <a href="https://amzn.to/4iPRL68">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Historical -->
+          <div class="product-card product-card-5" data-category="Historical">
+            <img
+              class="product-image"
+              src="bimg/play/GIRISH KARNAD.jpg"
               alt="Girish karnad"
               loading="lazy"
             />
@@ -499,10 +1087,190 @@
               <a href="https://amzn.to/3DjNQhR">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card">
+          <!-- Musical -->
+          <div class="product-card product-card-5" data-category="Musical">
             <img
               class="product-image"
-              src="bimg/The post office.jpg"
+              src="bimg/play/Les Miserables.jpg"
+              alt="Les Miserables"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Les Miserables</h3>
+              <p>
+                A gripping tale of justice, love, and redemption set in
+                post-revolutionary France, by Victor Hugo.
+              </p>
+              <a href="https://amzn.to/4gwUrnN">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Absurdist -->
+          <div class="product-card product-card-5" data-category="Absurdist">
+            <img
+              class="product-image"
+              src="bimg/play/Rosencrantz and Guidenstern are Dead.jpg"
+              alt="Rosencrantz and Guidenstern are Dead"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Rosencrantz and Guidenstern are Dead</h3>
+              <p>
+                A darkly comedic play exploring fate, existence, and absurdity.
+              </p>
+              <a href="https://amzn.to/49Nvvpo">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Morality -->
+          <div class="product-card product-card-5" data-category="Morality">
+            <img
+              class="product-image"
+              src="bimg/play/Everyman.jpg"
+              alt="Everyman"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Everyman</h3>
+              <p>
+                A modern adaptation of the classic moral play, exploring life's
+                choices and existential themes, by Akram Hossain.
+              </p>
+              <a href="https://amzn.to/3ZNVkkT">Click to Shop</a>
+            </div>
+          </div>
+          <!-- 2nd Round -->
+          <div class="product-card product-card-5" data-category="Tragedy">
+            <img
+              class="product-image"
+              src="bimg/play/Oedipus Rex.jpg"
+              alt="Oedipus Rex"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Oedipus Rex</h3>
+              <p>
+                A tragic Greek drama about fate, prophecy, and self-discovery,
+                by Sophocles.
+              </p>
+              <a href="https://amzn.to/3VL8Mo7">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-5" data-category="Comedy">
+            <img
+              class="product-image"
+              src="bimg/play/The Importance of Being Earnest.jpg"
+              alt="The Importance of Being Earnest"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>The Importance of Being Earnest</h3>
+              <p>
+                A witty comedy of manners about identity, love, and societal
+                expectations, by Oscar Wilde.
+              </p>
+              <a href="https://amzn.to/4iOLDep">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-5" data-category="Drama">
+            <img
+              class="product-image"
+              src="bimg/play/A Doll's House.jpg"
+              alt="A Doll's House"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>A Doll's House</h3>
+              <p>
+                A powerful drama exploring marriage, freedom, and
+                self-discovery, by Henrik Ibsen.
+              </p>
+              <a href="https://amzn.to/4iKT6vb">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-5" data-category="Tragicomedy">
+            <img
+              class="product-image"
+              src="bimg/play/Waiting For a Godat.jpg"
+              alt="Waiting For a Godat"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Waiting For a Godat</h3>
+              <p>
+                A groundbreaking play about existential uncertainty and the
+                human condition, by Samuel Beckett.
+              </p>
+              <a href="https://amzn.to/4gON9eH">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-5" data-category="Historical">
+            <img
+              class="product-image"
+              src="bimg/play/Julius Caesar.jpg"
+              alt="Julius Caesar"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Julius Caesar</h3>
+              <p>
+                A political tragedy about ambition, betrayal, and power, by
+                William Shakespeare.
+              </p>
+              <a href="https://amzn.to/3ZQICBG">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-5" data-category="Musical">
+            <img
+              class="product-image"
+              src="bimg/play/Phantom of the Opera.jpg"
+              alt="Phantom of the Opera"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Phantom of the Opera</h3>
+              <p>
+                A captivating musical of love, obsession, and tragedy set in an
+                opera house, by Andrew Lloyd Webber.
+              </p>
+              <a href="https://amzn.to/3P6HDZe">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-5" data-category="Absurdist">
+            <img
+              class="product-image"
+              src="bimg/play/The Bald Soprano.jpg"
+              alt="The Bald Soprano"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>The Bald Soprano</h3>
+              <p>
+                An absurdist play highlighting the breakdown of communication
+                and societal norms, by Eugène Ionesco.
+              </p>
+              <a href="https://amzn.to/3BPhc7d">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-5" data-category="Morality">
+            <img
+              class="product-image"
+              src="bimg/play/The Piligrims Progress.jpg"
+              alt="The Piligrims Progress"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>The Piligrims Progress</h3>
+              <p>
+                An allegorical journey of faith and salvation, depicting life's
+                struggles, by John Bunyan.
+              </p>
+              <a href="https://amzn.to/4goXcr7">Click to Shop</a>
+            </div>
+          </div>
+          <!-- 3rd Round -->
+          <div class="product-card product-card-5" data-category="Tragedy">
+            <img
+              class="product-image"
+              src="bimg/play/The post office.jpg"
               alt="The post office"
               loading="lazy"
             />
@@ -515,10 +1283,26 @@
               <a href="https://amzn.to/3BveovY">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card">
+          <div class="product-card product-card-5" data-category="Comedy">
             <img
               class="product-image"
-              src="bimg/Silence! The Court is in Session.jpg"
+              src="bimg/play/Noises Off.jpg"
+              alt="Noises Off"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Noises Off</h3>
+              <p>
+                A farcical comedy about backstage chaos in a play within a play,
+                by Michael Frayn.
+              </p>
+              <a href="https://amzn.to/4fu5JIi">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-5" data-category="Drama">
+            <img
+              class="product-image"
+              src="bimg/play/Silence! The Court is in Session.jpg"
               alt="Silence! The Court is in Session"
               loading="lazy"
             />
@@ -531,7 +1315,42 @@
               <a href="https://amzn.to/3VIRSH0">Click to Shop</a>
             </div>
           </div>
+          <div class="product-card product-card-5" data-category="Morality">
+            <img
+              class="product-image"
+              src="bimg/play/From Valley to Mountain.jpg"
+              alt="From Valley to Mountain"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>From Valley to Mountain</h3>
+              <p>
+                A reflective journey of self-discovery, resilience, and
+                overcoming life's struggles, by Dhananjaya Kumar.
+              </p>
+              <a href="https://amzn.to/4iOLU0V">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-5" data-category="Historical">
+            <img
+              class="product-image"
+              src="bimg/play/A Man for All Seasons.jpg"
+              alt="A Man for All Seasons"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>A Man for All Seasons</h3>
+              <p>
+                A historical drama about integrity, conscience, and power,
+                centered on Thomas More, by Robert Bolt.
+              </p>
+              <a href="https://amzn.to/404emVl">Click to Shop</a>
+            </div>
+          </div>
         </div>
+        <button id="load-more-5" class="load-more product-card-5">
+          More Books...
+        </button>
       </div>
     </section>
 

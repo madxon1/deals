@@ -1,407 +1,1010 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3MADZBOOK</title>
-    <link rel="icon" href="himg\logo1.png" type="image/x-icon">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bokor&family=Bungee+Spice&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3MADZCARE</title>
+    <link rel="icon" href="himg\logo1.png" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bokor&family=Bungee+Spice&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
     <!-- Animate.css for Animations -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="product.css">
-</head>
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70" tabindex="0">
-
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="product.css" />
+  </head>
+  <body
+    data-bs-spy="scroll"
+    data-bs-target=".navbar"
+    data-bs-offset="70"
+    tabindex="0"
+  >
     <!-- Logo Section -->
     <div class="logo-container">
-        <img src="himg/logo1.png" alt="3madz Logo" class="logo">
-        <div class="hub-container">
-            <div class="hub-text">CARE</div>
-        </div>
+      <img src="himg/logo1.png" alt="3madz Logo" class="logo" />
+      <div class="hub-container">
+        <div class="hub-text">CARE</div>
+      </div>
     </div>
-  <!-- Navigation Bar -->   
-  <nav class="navbar">
-    <!-- Toggler Button -->
-    <button class="toggler" onclick="toggleNav()">☰</button>
-    <ul class="nav-list" id="nav-list">
-      <li><a href="home">Home</a></li>
-      <li class="dropdown">
-        <a  class="drop-btn">Category▼</a>
-        <div class="dropdown-content">
-          <a class="nav" href="#Fiction">Fiction</a>
-          <a class="nav" href="#Non-Fiction">Non-Fiction</a>
-          <a class="nav" href="#Poetry">Poetry</a>
-          <a class="nav" href="#Graphic Navel">Graphic Navel</a>
-          <a class="nav" href="#Plays">Plays</a>
-        </div>
-      </li>
-      <li><a class="nav" href="#about">About</a></li>
-      <li><a class="nav" href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <!-- Toggler Button -->
+      <button class="toggler" onclick="toggleNav()">☰</button>
+      <ul class="nav-list" id="nav-list">
+        <li><a href="home">Home</a></li>
+        <li class="dropdown">
+          <a class="drop-btn">Category▼</a>
+          <div class="dropdown-content">
+            <a class="nav" href="#Skincare">Skincare</a>
+            <a class="nav" href="#Hairecare">Hairecare</a>
+            <a class="nav" href="#Bodycare">Bodycare</a>
+            <a class="nav" href="#Fragrances">Fragrances</a>
+            <a class="nav" href="#Makeup">Makeup</a>
+          </div>
+        </li>
+        <li><a class="nav" href="#about">About</a></li>
+        <li><a class="nav" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
     <!-- Carousel Section -->
-<section id="home">
-    <div id="carouselExampleAutoplaying" class="carousel slide">
-       
-
+    <section id="home">
+      <div id="carouselExampleAutoplaying" class="carousel slide">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <a href="https://amzn.to/49b1bFf"><img src="himg/Aaudible.jpeg" class="d-block w-100" alt="Audible Free"></a>
-            </div>
-            <div class="carousel-item">
-                <a href="https://amzn.to/3ZdqtO2"><img src="himg/Abusiness.jpeg" class="d-block w-100" alt="Business"></a>
-            </div>
-            <div class="carousel-item">
-                <a href="https://amzn.to/4icmhH6"><img src="himg/Amusic.jpeg" class="d-block w-100" alt="Music"></a>
-            </div>
-            <div class="carousel-item">
-                <a href="https://amzn.to/3CIwPxo"><img src="himg/Aprime.jpeg" class="d-block w-100" alt="Prime"></a>
-            </div>
-            <div class="carousel-item">
-                <a href="https://sell.amazon.in/sell-online.html?ref_=asin_soa_rd&ld=INSOAASSOCIATES&tag=3madbounty-21"><img src="himg/Aseller.jpeg" class="d-block w-100" alt="Seller"></a>
-            </div>
-            <div class="carousel-item">
-                <a href="https://amzn.to/3V7NUXR"><img src="himg/Avideo.jpeg" class="d-block w-100" alt="Video"></a>
-            </div>
+          <div class="carousel-item active">
+            <a href="https://amzn.to/49b1bFf"
+              ><img
+                src="himg/Aaudible.jpeg"
+                class="d-block w-100"
+                alt="Audible Free"
+            /></a>
+          </div>
+          <div class="carousel-item">
+            <a href="https://amzn.to/3ZdqtO2"
+              ><img
+                src="himg/Abusiness.jpeg"
+                class="d-block w-100"
+                alt="Business"
+            /></a>
+          </div>
+          <div class="carousel-item">
+            <a href="https://amzn.to/4icmhH6"
+              ><img src="himg/Amusic.jpeg" class="d-block w-100" alt="Music"
+            /></a>
+          </div>
+          <div class="carousel-item">
+            <a href="https://amzn.to/3CIwPxo"
+              ><img src="himg/Aprime.jpeg" class="d-block w-100" alt="Prime"
+            /></a>
+          </div>
+          <div class="carousel-item">
+            <a
+              href="https://sell.amazon.in/sell-online.html?ref_=asin_soa_rd&ld=INSOAASSOCIATES&tag=3madbounty-21"
+              ><img src="himg/Aseller.jpeg" class="d-block w-100" alt="Seller"
+            /></a>
+          </div>
+          <div class="carousel-item">
+            <a href="https://amzn.to/3V7NUXR"
+              ><img src="himg/Avideo.jpeg" class="d-block w-100" alt="Video"
+            /></a>
+          </div>
         </div>
-        
-        <!-- Carousel Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon btn btn-light" aria-hidden="true"></span>
-            <span class="visually-hidden-focusable">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-            <span class="carousel-control-next-icon btn btn-light" aria-hidden="true"></span>
-            <span class="visually-hidden-focusable">Next</span>
-        </button>
-         <!-- Carousel Indicators -->
-         <ol class="carousel-indicators">
-            <li data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"></li>
-            <li data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2"></li>
-            <li data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="3"></li>
-            <li data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="4"></li>
-            <li data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="5"></li>
-        </ol>
-    </div>
-</section>
-    <!-- product -->
-    <section id="product" >
-    <div class="category-section">
-        <!-- /* Fiction */ -->
-        <div id="Fiction" class="category-custom">Fiction</div>
-        <div  class="product-grid product-grid-1">
-            <!-- Mystery -->
-            <div class="product-card">
-                <img class="product-image" src="bimg/The Bandit Queens.jpg" alt="The Bandit Queens" loading="lazy">
-                <div class="product-info">
-                    <h3>The Bandit Queens</h3>
-                    <p> A women rumored to have killed her husband finds herself helping others escape bad marriages, leading to chaos in this darkly comic tale.</p>
-                    <a href="https://amzn.to/4giOrz4">Click to Shop</a>
-                </div>
-            </div>
-            <div class="product-card">
-                <img class="product-image" src="bimg/The Widows of Malabar Hill.jpg" alt="The Widows of Malabar Hill" loading="lazy">
-                <div class="product-info">
-                    <h3>The Widows of Malabar Hill</h3>
-                    <p>A historical mystery featuring india's first female lawyer solving case in 1920s Bombay .</p>
-                    <a href="https://amzn.to/4iAoVXu">Click to Shop</a>
-                </div>
-            </div>
-            <div class="product-card">
-            <img class="product-image" src="bimg/Chasing The Monsoon.jpg" alt="Chasing The Monsoon" loading="lazy">
-                <div class="product-info">
-                    <h3>Chasing The Monsoon</h3>
-                    <p>Apsychological thriller set in Bengaluru involving a detective on the trail of a serial killer.</p>
-                    <a href="https://amzn.to/3OWiU9V">Click to Shop</a>
-                </div>
-            </div>
-            <!-- Romance -->
-            <div class="product-card">
-                <img class="product-image" src="bimg/The Midnight Library.jpg" alt="The Midnight Library" loading="lazy">
-                <div class="product-info">
-                    <h3>The Midnight Library</h3>
-                    <p>A reflactive novel about second chances and the paths we take in life.</p>
-                    <a href="https://amzn.to/4gzLQAp">Click to Shop</a>
-                </div>
-            </div>
-            <!-- Fantasy -->
-            <div class="product-card">
-                <img class="product-image" src="bimg/Calcutta Chromosome.jpg" alt="Calcutta Chromosome" loading="lazy">
-                <div class="product-info">
-                    <h3>Calcutta Chromosome</h3>
-                    <p>A blend of science fiction and medical thriller exploring genetics and historical enigmas.</p>
-                    <a href="https://amzn.to/49Cj146">Click to Shop</a>
-                </div>
-            </div>
-            <div class="product-card">
-                <img class="product-image" src="bimg/I Hear You.jpg" alt="I Hear You" loading="lazy">
-                <div class="product-info">
-                    <h3>I Hear You</h3>
-                    <p>A psychological thriller with elements of science fiction involving a genetically altered foetuswith superpowers.</p>
-                    <a href="https://amzn.to/3ZVDJZe">Click to Shop</a>
-                </div>
-            </div>
-            <!-- Young Adult  -->
-            <div class="product-card">
-                <img class="product-image" src="bimg/Wake Up, Life is Calling.jpg" alt="Wake Up, Life is Calling" loading="lazy">
-                <div class="product-info">
-                    <h3>Wake Up, Life is Calling</h3>
-                    <p>It is about a young woman named Ankita who studies Creative Writing in Mumbai while battling bipolar disorder.</p>
-                    <a href="https://amzn.to/3ZVDJZe">Click to Shop</a>
-                </div>
-            </div>
-        </div>
-        <button id="load-more-1" class="load-more">More Books...</button>
-        <!-- /* Non-Fiction */ -->
-        <div id="Non-Fiction" class="category-custom">Non-Fiction</div>
-        <div  class="product-grid product-grid-2">
-            <!-- Biography -->
-            <div class="product-card">
-                <img class="product-image" src="bimg/Homeless.jpg" alt="Homeless" loading="lazy">
-                <div class="product-info">
-                    <h3>Homeless</h3>
-                    <p>An honest and bold autobiography about overcoming challenges of identity and learning difficulties.</p>
-                    <a href="https://amzn.to/404vVot">Click to Shop</a>
-                </div>
-            </div>
-            <!-- History -->
-            <div class="product-card">
-                <img class="product-image" src="bimg/The Indian Metropolis.jpg" alt="The Indian Metropolis" loading="lazy">
-                <div class="product-info">
-                    <h3>Indian metropolis</h3>
-                    <p>A critique of urban ddevelopment in india, highlighting human-centric solutions.</p>
-                    <a href="https://amzn.to/3ZBiSJx">Click to Shop</a>
-                </div>
-            </div>
-            <!-- Self-Help -->
-            <div class="product-card">
-                <img class="product-image" src="bimg/Atomic Habits.jpg" alt="Atomic Habits" loading="lazy">
-                <div class="product-info">
-                    <h3>Atomic Habits</h3>
-                    <p>A globally trending book on building good habits and habits and breaking bad ones.</p>
-                    <a href="https://amzn.to/3Dgg2Ch">Click to Shop</a>
-                </div>
-            </div>
-            <div class="product-card">
-                <img class="product-image" src="bimg/The Psychology of Money.jpg" alt="The Psychology of Money" loading="lazy">
-                <div class="product-info">
-                    <h3>The Psychology of Money</h3>
-                    <p>It examines how emotions and behaviors shape financial decisions and success.</p>
-                    <a href="https://amzn.to/4gAwfRc">Click to Shop</a>
-                </div>
-            </div>
-            <div class="product-card">
-                <img class="product-image" src="bimg/LIGHT FROM MANY LAMPS.jpg" alt="Light from many Lamps" loading="lazy">
-                <div class="product-info">
-                    <h3>Light from many Lamps</h3>
-                    <p>It is s timeless collection of inspirational wisdom and stories to guide personal growth and resilience.</p>
-                    <a href="https://amzn.to/48KxYAw">Click to Shop</a>
-                </div>
-            </div>
-            <!-- Travel -->
-            <div class="product-card">
-                <img class="product-image" src="bimg/Chasing The Monsoon.jpg" alt="Chasing The Monsoon" loading="lazy">
-                <div class="product-info">
-                    <h3>Chasing The Monsoon</h3>
-                    <p>A classic exploration of India's monsoon season and its cultural significance.</p>
-                    <a href="https://amzn.to/3Bv3PJi">Click to Shop</a>
-                </div>
-            </div>
-        </div>
-        <button id="load-more-2" class="load-more">More Books...</button>
-        <!-- /* Poetry */ -->
-        <div id="Poetry" class="category-custom">Poetry</div>
-        <div  class="product-grid product-grid-3">
-            
-            <div class="product-card">
-                <img class="product-image" src="bimg/Writing Fire.jpg" alt="Writing Fire" loading="lazy">
-                <div class="product-info">
-                    <h3>Writing Fire</h3>
-                    <p> An Anthology Celebrating the Power of Women's Words highlights women's voices through inspiring stories, poetry, and essays.</p>
-                    <a href="https://amzn.to/3ZRs8dM">Click to Shop</a>
-                </div>
-            </div>
-            <div class="product-card">
-                <img class="product-image" src="bimg/Rain Clouds.jpg" alt="Rain Clouds" loading="lazy">
-                <div class="product-info">
-                    <h3>Rain Clouds</h3>
-                    <p>Rain Clouds by Meerabai is a soulful collection of devotional poetry expressing love and longing for the divine.</p>
-                    <a href="https://amzn.to/3OU1zi3">Click to Shop</a>
-                </div>
-            </div>
-        </div>
-        <!-- /* Graphic Navel */ -->
-        <div id="Graphic Navel" class="category-custom">Graphic Navel</div>
-        <div  class="product-grid product-grid-4">
-            <div class="product-card">
-                <img class="product-image" src="bimg/Priya's Shakti.jpg" alt="Priya's Shakti" loading="lazy">
-                <div class="product-info">
-                    <h3>Priya's Shakti</h3>
-                    <p>It is a graphic novel blending myth and activism to champion gender equality and combat sexual violence.</p>
-                    <a href="https://amzn.to/41BJ7Ce">Click to Shop</a>
-                </div>
-            </div>
-            <div class="product-card">
-                <img class="product-image" src="bimg/Tinkle Single Digest.jpg" alt="Tinkle Digest" loading="lazy">
-                <div class="product-info">
-                    <h3>Tinkle Digest</h3>
-                    <p>It is a delightful compilation of stories, comics, and fun features that entertain and educate readers of all ages.</p>
-                    <a href="https://amzn.to/4iEqhQQ">Click to Shop</a>
-                </div>
-            </div>
-            <div class="product-card">
-                <img class="product-image" src="bimg/Chanakya.jpg" alt="Chanakya" loading="lazy">
-                <div class="product-info">
-                    <h3>Chanakya</h3>
-                    <p>It delves into the life and wisdom of the ancient strategist, highlighting his teachings on governance, diplomacy, and leadership.</p>
-                    <a href="https://amzn.to/41DIeZR">Click to Shop</a>
-                </div>
-            </div>
-        </div>
-        <!-- /* Plays */ -->
-        <div id="Plays" class="category-custom">Plays</div>
-        <div  class="product-grid product-grid-5">
-            <div class="product-card">
-                <img class="product-image" src="bimg/GIRISH KARNAD.jpg" alt="Girish karnad" loading="lazy">
-                <div class="product-info">
-                    <h3>Girish karnad</h3>
-                    <p>It offers an in-depth analysis of Karnad's play, exploring its themes, characters, and historical relevance.</p>
-                    <a href="https://amzn.to/3DjNQhR">Click to Shop</a>
-                </div>
-            </div>
-            <div class="product-card">
-                <img class="product-image" src="bimg/The post office.jpg" alt="The post office" loading="lazy">
-                <div class="product-info">
-                    <h3>The post office</h3>
-                    <p>It is a poignant play exploring hope, isolation, and the human spirit through a young boy's longing for freedom.</p>
-                   <a href="https://amzn.to/3BveovY">Click to Shop</a>
-                </div>
-            </div>
-            <div class="product-card">
-                <img class="product-image" src="bimg/Silence! The Court is in Session.jpg" alt="Silence! The Court is in Session" loading="lazy">
-                <div class="product-info">
-                    <h3>Silence! The Court is in Session</h3>
-                    <p>It is a powerful play that critiques societal hypocrisy and gender dynamics through a mock court trial.</p>
-                    <a href="https://amzn.to/3VIRSH0">Click to Shop</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-   
+        <!-- Carousel Controls -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev"
+        >
+          <span
+            class="carousel-control-prev-icon btn btn-light"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden-focusable">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next"
+        >
+          <span
+            class="carousel-control-next-icon btn btn-light"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden-focusable">Next</span>
+        </button>
+        <!-- Carousel Indicators -->
+        <ol class="carousel-indicators">
+          <li
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide-to="0"
+            class="active"
+          ></li>
+          <li
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide-to="1"
+          ></li>
+          <li
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide-to="2"
+          ></li>
+          <li
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide-to="3"
+          ></li>
+          <li
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide-to="4"
+          ></li>
+          <li
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide-to="5"
+          ></li>
+        </ol>
+      </div>
+    </section>
+    <!-- product -->
+    <section id="product">
+      <div class="category-section">
+        <!-- /* Skincare */ -->
+        <div id="Skincare" class="category-custom">Skincare</div>
+        <div class="pro-categories pro-categories-1">
+          <button class="active" onclick="filterProducts1('all-1')">All</button>
+          <button onclick="filterProducts1('Cleansers')">Cleansers</button>
+          <button onclick="filterProducts1('Moisturizers')">
+            Moisturizers
+          </button>
+          <button onclick="filterProducts1('Exfoliants')">Exfoliants</button>
+          <button onclick="filterProducts1('Sunscreens')">Sunscreens</button>
+          <button onclick="filterProducts1('Serums')">Serums</button>
+          <button onclick="filterProducts1('Masks')">Masks</button>
+          <button onclick="filterProducts1('Eye')">Eye</button>
+        </div>
+        <div class="product-grid product-grid-1">
+          <!-- Cleansers -->
+          <div class="product-card product-card-1" data-category="Cleansers">
+            <img
+              class="product-image"
+              src="cimg/skin/Cetaphil Gentle Skin Cleanser.jpg"
+              alt="Cetaphil Gentle Skin Cleanser"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Cetaphil Gentle Skin Cleanser</h3>
+              <p>
+                Gentle Cetaphil Face Wash cleanses, hydrates, and soothes
+                sensitive skin; dermatologist recommended.
+              </p>
+              <a href="https://amzn.to/4giOrz4">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Moisturizers -->
+          <div class="product-card product-card-1" data-category="Moisturizers">
+            <img
+              class="product-image"
+              src="cimg/skin/Minimalist Marula Oil Moisturizer.jpg"
+              alt="Minimalist Marula Oil Moisturizer"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Minimalist Marula Oil Moisturizer</h3>
+              <p>
+                Minimalist Marula Oil 5% Face Moisturizer hydrates, repairs, and
+                boosts skin elasticity.
+              </p>
+              <a href="https://amzn.to/3ZE1u6U">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Exfoliants -->
+          <div class="product-card product-card-1" data-category="Exfoliants">
+            <img
+              class="product-image"
+              src="cimg/skin/mcaffeine Coffee Face Scrub.jpg"
+              alt="mcaffeine Coffee  Face Scrub"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>mcaffeine Coffee Face Scrub</h3>
+              <p>
+                mCaffeine Coffee Face Scrub deeply exfoliates, removes tan, and
+                leaves skin smooth and glowing.
+              </p>
+              <a href="https://amzn.to/4gnDWdz">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Sunscreens  -->
+          <div class="product-card product-card-1" data-category="Sunscreens">
+            <img
+              class="product-image"
+              src="cimg/skin/Derma Co Hyaluronic Sunscreen.jpg"
+              alt="Derma Co Hyaluronic Sunscreen"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Derma Co Hyaluronic Sunscreen</h3>
+              <p>
+                Derma co Hyaluronic sunscreen prevents our skin from tanning and
+                locks the moisture in the skin.
+              </p>
+              <a href="https://amzn.to/3Ot7qum">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Serums -->
+          <div class="product-card product-card-1" data-category="Serums">
+            <img
+              class="product-image"
+              src="cimg/skin/Minimalist Anti-Acne Face Serum.jpg"
+              alt="Minimalist Anti-Acne Face Serum.jpg"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Minimalist Anti-Acne Face Serum</h3>
+              <p>
+                Minimalist 10% Niacinamide Face Serum with Zinc controls oil,
+                fights acne, and reduces blemishes.
+              </p>
+              <a href="https://amzn.to/3ZPud8K">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Masks -->
+          <div class="product-card product-card-1" data-category="Masks">
+            <img
+              class="product-image"
+              src="cimg/skin/Foxtale instant glow face Mask.jpg"
+              alt="Foxtale instant glow face Mask"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Foxtale instant glow face Mask</h3>
+              <p>
+                Foxtale Overnight Glow Mask with 4% Glycolic and 3% Lactic Acid
+                exfoliates for radiant skin.
+              </p>
+              <a href="https://amzn.to/3P6AnfW">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Eye Cares -->
+          <div class="product-card product-card-1" data-category="Eye">
+            <img
+              class="product-image"
+              src="cimg/skin/Derma Co purple Under Eye repair cream.jpg"
+              alt="Derma Co purple Under Eye repair cream"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Derma Co purple Under Eye repair cream</h3>
+              <p>
+                The Derma Co. Snail Peptide 96 Under Eye Repair Cream hydrates,
+                reduces dark circles, and firms skin.
+              </p>
+              <a href="https://amzn.to/404Lqwj">Click to Shop</a>
+            </div>
+          </div>
+          <!--Cleanser-->
+          <div class="product-card product-card-1" data-category="Cleansers">
+            <img
+              class="product-image"
+              src="cimg/skin/Minimalist 2% Salicylic Acid Face Wash.jpg"
+              alt="Minimalist 2% Salicylic Acid Face Wash"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Minimalist 2% Salicylic Acid Face Wash</h3>
+              <p>
+                Gentle, exfoliating face wash with 2% Salicylic Acid for clear,.
+                acne-free, smooth skin.
+              </p>
+              <a href="https://amzn.to/4giOrz4">Click to Shop</a>
+            </div>
+          </div>
+          <!--moisturizer-->
+          <div class="product-card product-card-1" data-category="Moisturizers">
+            <img
+              class="product-image"
+              src="cimg/skin/Cetaphil Moisturising Cream.jpg"
+              alt="Cetaphil Moisturising Cream"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Cetaphil Moisturising Cream</h3>
+              <p>
+                Minimalist Marula Oil 5% Face Moisturizer hydrates, repairs, and
+                boosts skin elasticity.
+              </p>
+              <a href="https://amzn.to/4gOhg6h">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-1" data-category="Exfoliants">
+            <img
+              class="product-image"
+              src="cimg/skin/mcaffeine Coffee Face Scrub.jpg"
+              alt="mcaffeine Coffee  Face Scrub"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>mcaffeine Coffee Face Scrub</h3>
+              <p>
+                mCaffeine Coffee Face Scrub deeply exfoliates, removes tan, and
+                leaves skin smooth and glowing.
+              </p>
+              <a href="https://amzn.to/4gnDWdz">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-1" data-category="Sunscreens">
+            <img
+              class="product-image"
+              src="cimg/skin/Deconstruct Face Gel Sunscreen.jpg"
+              alt="Deconstruct Face Gel Sunscreen"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Deconstruct Face Gel Sunscreen</h3>
+              <p>
+                Deconstruct SPF 50 Sunscreen provides broad-spectrum protection,
+                hydrates, and prevents tanning.
+              </p>
+              <a href="https://amzn.to/3DcUgz9">Click to Shop</a>
+            </div>
+          </div>
+          <div class="product-card product-card-1" data-category="Serums">
+            <img
+              class="product-image"
+              src="cimg/skin/The Derma Co 2% Kojic Acid Face Serum .jpg"
+              alt="The Derma Co 2% Kojic Acid Face Serum "
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>The Derma Co 2% Kojic Acid Face Serum</h3>
+              <p>
+                The Derma Co 2% Kojic Acid Serum brightens skin, reduces dark
+                spots, and evens skin tone.
+              </p>
+              <a href="https://amzn.to/3VRnV7z">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Masks -->
+          <div class="product-card product-card-1" data-category="Masks">
+            <img
+              class="product-image"
+              src="cimg/skin/Foxtale clay Mask.jpg"
+              alt="Foxtale Clay Mask"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Foxtale Clay Mask</h3>
+              <p>
+                Foxtale De-Tan Clay Mask removes tan, detoxifies, and brightens
+                for smooth, glowing skin.
+              </p>
+              <a href="https://amzn.to/408RdBm">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Eye Cares -->
+          <div class="product-card product-card-1" data-category="Eye">
+            <img
+              class="product-image"
+              src="cimg/skin/Minimalist Under Eye cream.jpg"
+              alt="Minimalist Vitamin K Under Eye cream"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Minimalist Vitamin K Under Eye cream</h3>
+              <p>
+                Minimalist Vitamin K + Retinal 0.1% Under Eye Cream reduces dark
+                circles and smoothens skin.
+              </p>
+              <a href="https://amzn.to/3ZUK6Lw">Click to Shop</a>
+            </div>
+          </div>
+          <!--Cleanser-->
+          <div class="product-card product-card-1" data-category="Cleansers">
+            <img
+              class="product-image"
+              src="cimg/skin/Muuchstac Ocean Face Wash.jpg"
+              alt="Muuchstac Ocean Face Wash"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Muuchstac Ocean Face Wash</h3>
+              <p>
+                Muuchstac Ocean Face Wash for Men deeply cleanses, refreshes,
+                and rejuvenates skin with ocean extracts.
+              </p>
+              <a href="https://amzn.to/3VKYbKc">Click to Shop</a>
+            </div>
+          </div>
+          <!--Cleanser-->
+          <div class="product-card product-card-1" data-category="Cleansers">
+            <img
+              class="product-image"
+              src="cimg/skin/DOT & KEY Face Wash.jpg"
+              alt="DOT & KEY Face Wash"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>DOT & KEY Face Wash</h3>
+              <p>
+                DOT & KEY Barrier Repair Face Wash gently cleanses, hydrates,
+                and strengthens the skin barrier.
+              </p>
+              <a href="https://amzn.to/3BuilBf">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Moisturizers -->
+          <div class="product-card product-card-1" data-category="Moisturizers">
+            <img
+              class="product-image"
+              src="cimg/skin/Derma Co Oil-Free Daily Face Moisturizer.jpg"
+              alt="Derma Co Oil-Free Daily Face Moisturizer"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Derma Co Oil-Free Daily Face Moisturizer</h3>
+              <p>
+                Derma Co Oil-Free Daily Face Moisturizer hydrates, controls oil,
+                and keeps skin smooth and fresh.
+              </p>
+              <a href="https://amzn.to/3BHB8sP">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Moisturizers -->
+          <div class="product-card product-card-1" data-category="Moisturizers">
+            <img
+              class="product-image"
+              src="cimg/skin/Dot & Key Ceramides Moisturizer.jpg"
+              alt="Dot & Key Ceramides Moisturizer"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Dot & Key Ceramides Moisturizer</h3>
+              <p>
+                Dot & Key Ceramides Moisturizer with Hyaluronic Acid intensely
+                hydrates and strengthens skin.
+              </p>
+              <a href="https://amzn.to/3Dk3nOz">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Sunscreens  -->
+          <div class="product-card product-card-1" data-category="Sunscreens">
+            <img
+              class="product-image"
+              src="cimg/skin/Ceramide & Vitamin C Sunscreen.jpg"
+              alt="Ceramide & Vitamin C Sunscreen"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Ceramide & Vitamin C Sunscreen</h3>
+              <p>
+                Dr. Sheth's Ceramide & Vitamin C Sunscreen nourishes, protects,
+                and brightens skin with SPF 50.
+              </p>
+              <a href="https://amzn.to/49PfzDg">Click to Shop</a>
+            </div>
+          </div>
+        </div>
+        <button id="load-more-1" class="load-more product-card-1">
+          More Cares...
+        </button>
+
+        <!-- /* Hairecare */ -->
+        <div id="Hairecare" class="category-custom">Hairecare</div>
+        <div class="pro-categories pro-categories-2">
+          <button class="active" onclick="filterProducts2('all-2')">All</button>
+          <button onclick="filterProducts2('Shampoos')">Shampoos</button>
+          <button onclick="filterProducts2('Conditioners')">
+            Conditioners
+          </button>
+          <button onclick="filterProducts2('Hair Serums')">Hair Serums</button>
+          <button onclick="filterProducts2('Hair Masks')">Hair Masks</button>
+          <button onclick="filterProducts2('Stylers')">Stylers</button>
+        </div>
+        <!-- Shampoos -->
+        <div class="product-grid product-grid-2">
+          <div class="product-card product-card-2" data-category="Shampoos">
+            <img
+              class="product-image"
+              src="cimg/hair/Mamaearth Onion Hair Fall Shampoo.jpg"
+              alt="Mamaearth Onion Hair Fall Shampoo"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Mamaearth Onion Hair Fall Shampoo</h3>
+              <p>
+                Mamaearth Onion Hair Fall Shampoo with Onion Oil promotes hair
+                growth and controls hair fall.
+              </p>
+              <a href="https://amzn.to/3ZO2SDV">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Conditioners -->
+          <div class="product-card product-card-2" data-category="Conditioners">
+            <img
+              class="product-image"
+              src="bimg/The Indian Metropolis.jpg"
+              alt="The Indian Metropolis"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Indian metropolis</h3>
+              <p>
+                A critique of urban ddevelopment in india, highlighting
+                human-centric solutions.
+              </p>
+              <a href="https://amzn.to/3ZBiSJx">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Hair Serums  -->
+          <div class="product-card product-card-2" data-category="Hair Serums">
+            <img
+              class="product-image"
+              src="bimg/Atomic Habits.jpg"
+              alt="Atomic Habits"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Atomic Habits</h3>
+              <p>
+                A globally trending book on building good habits and habits and
+                breaking bad ones.
+              </p>
+              <a href="https://amzn.to/3Dgg2Ch">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Hair Masks -->
+          <div class="product-card product-card-2" data-category="Hair Masks">
+            <img
+              class="product-image"
+              src="bimg/Chasing The Monsoon.jpg"
+              alt="Chasing The Monsoon"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Chasing The Monsoon</h3>
+              <p>
+                A classic exploration of India's monsoon season and its cultural
+                significance.
+              </p>
+              <a href="https://amzn.to/3Bv3PJi">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Stylers -->
+          <div class="product-card product-card-2" data-category="Stylers">
+            <img
+              class="product-image"
+              src="bimg/Writing Fire.jpg"
+              alt="Writing Fire"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Writing Fire</h3>
+              <p>
+                An Anthology Celebrating the Power of Women's Words highlights
+                women's voices through inspiring stories, poetry, and essays.
+              </p>
+              <a href="https://amzn.to/3ZRs8dM">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Shampoos -->
+          <div class="product-card product-card-2" data-category="Shampoos">
+            <img
+              class="product-image"
+              src="cimg/hair/Selsun Suspension Anti Dandruff Shampoo.jpg"
+              alt="Selsun Suspension Anti Dandruff Shampoo."
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Selsun Suspension Anti Dandruff Shampoo.</h3>
+              <p>
+                Selsun Suspension Anti-Dandruff Shampoo effectively treats
+                dandruff and soothes itchy scalp.
+              </p>
+              <a href="https://amzn.to/3ZLyhXQ">Click to Shop</a>
+            </div>
+          </div>
+        </div>
+        <button id="load-more-2" class="load-more product-card-2">
+          More Cares...
+        </button>
+
+        <!-- /* Bodycare*/ -->
+        <div id="Bodycare" class="category-custom">Bodycare</div>
+        <div class="pro-categories pro-categories-3">
+          <button class="active" onclick="filterProducts3('all-3')">All</button>
+          <button onclick="filterProducts3('Body Wash')">Body Washes</button>
+          <button onclick="filterProducts3('Body Lotion')">Body Lotions</button>
+          <button onclick="filterProducts3('Deodrants')">Deodrants</button>
+          <button onclick="filterProducts3('Scrubs')">Scrubs</button>
+        </div>
+        <div class="product-grid product-grid-3">
+          <!-- Body Wash/Soap   -->
+          <div class="product-card product-card-3" data-category="Body Wash">
+            <img
+              class="product-image"
+              src="bimg/Writing Fire.jpg"
+              alt="Writing Fire"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Writing Fire</h3>
+              <p>
+                An Anthology Celebrating the Power of Women's Words highlights
+                women's voices through inspiring stories, poetry, and essays.
+              </p>
+              <a href="https://amzn.to/3ZRs8dM">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Body Lotion/Butters -->
+          <div class="product-card product-card-3" data-category="Body Lotion">
+            <img
+              class="product-image"
+              src="bimg/Rain Clouds.jpg"
+              alt="Rain Clouds"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Rain Clouds</h3>
+              <p>
+                Rain Clouds by Meerabai is a soulful collection of devotional
+                poetry expressing love and longing for the divine.
+              </p>
+              <a href="https://amzn.to/3OU1zi3">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Deodrants/Antiperspiration -->
+          <div class="product-card product-card-3" data-category="Deodrants">
+            <img
+              class="product-image"
+              src="bimg/Writing Fire.jpg"
+              alt="Writing Fire"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Writing Fire</h3>
+              <p>
+                An Anthology Celebrating the Power of Women's Words highlights
+                women's voices through inspiring stories, poetry, and essays.
+              </p>
+              <a href="https://amzn.to/3ZRs8dM">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Scrubs -->
+          <div class="product-card product-card-3" data-category="Scrubs">
+            <img
+              class="product-image"
+              src="bimg/Writing Fire.jpg"
+              alt="Writing Fire"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Writing Fire</h3>
+              <p>
+                An Anthology Celebrating the Power of Women's Words highlights
+                women's voices through inspiring stories, poetry, and essays.
+              </p>
+              <a href="https://amzn.to/3ZRs8dM">Click to Shop</a>
+            </div>
+          </div>
+        </div>
+        <button id="load-more-3" class="load-more product-card-3">
+          More Cares...
+        </button>
+
+        <!-- /* Fragrances */ -->
+        <div id="Fragrances" class="category-custom">Fragrances</div>
+        <div class="pro-categories pro-categories-4">
+          <button class="active" onclick="filterProducts4('all-4')">All</button>
+          <button onclick="filterProducts4('Perfumes')">Perfumes</button>
+          <button onclick="filterProducts4('EDP')">Eau de Parfums</button>
+          <button onclick="filterProducts4('EDT')">Eau de Toilette</button>
+          <button onclick="filterProducts4('Body Mist')">Body Mist</button>
+        </div>
+        <div class="product-grid product-grid-4">
+          <!-- Perfumes -->
+          <div class="product-card product-card-4" data-category="Perfumes">
+            <img
+              class="product-image"
+              src="cimg/frag/Bella Vita Luxury Woman Parfum.jpg"
+              alt="Bella Vita Luxury Woman Parfum"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Bella Vita Luxury Woman Parfum</h3>
+              <p>
+                Bella Vita Luxury Woman Eau De Parfum Gift Set (4x20 ml) offers
+                a captivating, luxurious scent.
+              </p>
+              <a href="https://amzn.to/4gHdueZ">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Eau de Parfums -->
+          <div class="product-card product-card-4" data-category="EDP">
+            <img
+              class="product-image"
+              src="bimg/Tinkle Single Digest.jpg"
+              alt="Tinkle Digest"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Tinkle Digest</h3>
+              <p>
+                It is a delightful compilation of stories, comics, and fun
+                features that entertain and educate readers of all ages.
+              </p>
+              <a href="https://amzn.to/4iEqhQQ">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Eau de Toilettes -->
+          <div class="product-card product-card-4" data-category="EDT">
+            <img
+              class="product-image"
+              src="cimg/"
+              alt="Priya's Shakti"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Priya's Shakti</h3>
+              <p>
+                It is a graphic novel blending myth and activism to champion
+                gender equality and combat sexual violence.
+              </p>
+              <a href="https://amzn.to/41BJ7Ce">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Body Mist -->
+          <div class="product-card product-card-4" data-category="Body Mist">
+            <img
+              class="product-image"
+              src="bimg/Chanakya.jpg"
+              alt="Chanakya"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Chanakya</h3>
+              <p>
+                It delves into the life and wisdom of the ancient strategist,
+                highlighting his teachings on governance, diplomacy, and
+                leadership.
+              </p>
+              <a href="https://amzn.to/41DIeZR">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Perfumes -->
+          <div class="product-card product-card-4" data-category="Perfumes">
+            <img
+              class="product-image"
+              src="cimg/frag/RENEE Eau De Parfum.jpg"
+              alt="RENEE Eau De Parfum"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>RENEE Eau De Parfum</h3>
+              <p>
+                RENEE Eau De Parfum Bloom 8ml offers a premium, long-lasting
+                luxury fragrance for a fresh feel.
+              </p>
+              <a href="https://amzn.to/41BIE2O">Click to Shop</a>
+            </div>
+          </div>
+        </div>
+        <button id="load-more-4" class="load-more product-card-4">
+          More Cares...
+        </button>
+
+        <!-- /* Makeup */ -->
+        <div id="Makeup" class="category-custom">Makeup</div>
+        <div class="pro-categories pro-categories-5">
+          <button class="active" onclick="filterProducts5('all-5')">All</button>
+          <button onclick="filterProducts5('Face')">Face</button>
+          <button onclick="filterProducts5('Eye')">Eye</button>
+          <button onclick="filterProducts5('Lip')">Lip</button>
+          <button onclick="filterProducts5('Cheek')">Cheek</button>
+        </div>
+        <div class="product-grid product-grid-5">
+          <!-- Face -->
+          <div class="product-card product-card-5" data-category="Face">
+            <img
+              class="product-image"
+              src="cimg/"
+              alt="Priya's Shakti"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Priya's Shakti</h3>
+              <p>
+                It is a graphic novel blending myth and activism to champion
+                gender equality and combat sexual violence.
+              </p>
+              <a href="https://amzn.to/41BJ7Ce">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Eye -->
+          <div class="product-card product-card-5" data-category="Eye">
+            <img
+              class="product-image"
+              src="bimg/Tinkle Single Digest.jpg"
+              alt="Tinkle Digest"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Tinkle Digest</h3>
+              <p>
+                It is a delightful compilation of stories, comics, and fun
+                features that entertain and educate readers of all ages.
+              </p>
+              <a href="https://amzn.to/4iEqhQQ">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Lip -->
+          <div class="product-card product-card-5" data-category="Lip">
+            <img
+              class="product-image"
+              src="cimg/"
+              alt="Priya's Shakti"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Priya's Shakti</h3>
+              <p>
+                It is a graphic novel blending myth and activism to champion
+                gender equality and combat sexual violence.
+              </p>
+              <a href="https://amzn.to/41BJ7Ce">Click to Shop</a>
+            </div>
+          </div>
+          <!-- Cheek -->
+          <div class="product-card product-card-5" data-category="Cheek">
+            <img
+              class="product-image"
+              src="bimg/Chanakya.jpg"
+              alt="Chanakya"
+              loading="lazy"
+            />
+            <div class="product-info">
+              <h3>Chanakya</h3>
+              <p>
+                It delves into the life and wisdom of the ancient strategist,
+                highlighting his teachings on governance, diplomacy, and
+                leadership.
+              </p>
+              <a href="https://amzn.to/41DIeZR">Click to Shop</a>
+            </div>
+          </div>
+        </div>
+        <button id="load-more-5" class="load-more product-card-5">
+          More Cares...
+        </button>
+      </div>
+    </section>
+
     <!-- Back-to-Top Button -->
-    <button id="backToTop" aria-label="Back to Top">
-        &#8593;
-    </button>
+    <button id="backToTop" aria-label="Back to Top">&#8593;</button>
 
     <!-- About Us Section -->
     <section id="about" class="container mt-5">
-        <h1 class="text-center mb-4 animate">About Us</h1>
-        <p class="text-center animate">Welcome to <strong>3MADZ</strong>, your trusted Amazon affiliate agency. We connect you with the right products at the right price, making online shopping seamless and reliable.</p>
-        <div class="menu-container animate ">
-            <!-- Our Mission -->
-            <div class="menu-item">
-                <span>Mission</span>
-                <div class="tooltip">
-                    <h4>Our Mission</h4>
-                    <p>To empower shoppers by offering access to quality products at fair prices through a trusted affiliate network.</p>
-                </div>
-            </div>
-    
-            <!-- What We Offer -->
-            <div class="menu-item">
-                <span>Offer</span>
-                <div class="tooltip">
-                    <h4>What We Offer</h4>
-                    <ul>
-                        <li>Product Recommendations</li>
-                        <li>Guided Shopping Experience</li>
-                        <li>Affiliate Connections</li>
-                    </ul>
-                </div>
-            </div>
-    
-            <!-- Why Choose Us -->
-            <div class="menu-item">
-                <span>Why Us</span>
-                <div class="tooltip">
-                    <h4>Why Choose Us</h4>
-                    <ul>
-                        <li>Right to Price, Right to Product</li>
-                        <li>Tailored Recommendations</li>
-                        <li>Trustworthy Affiliate Network</li>
-                        <li>Exceptional Support</li>
-                    </ul>
-                </div>
-            </div>
+      <h1 class="text-center mb-4 animate">About Us</h1>
+      <p class="text-center animate">
+        Welcome to <strong>3MADZ</strong>, your trusted Amazon affiliate agency.
+        We connect you with the right products at the right price, making online
+        shopping seamless and reliable.
+      </p>
+      <div class="menu-container animate">
+        <!-- Our Mission -->
+        <div class="menu-item">
+          <span>Mission</span>
+          <div class="tooltip">
+            <h4>Our Mission</h4>
+            <p>
+              To empower shoppers by offering access to quality products at fair
+              prices through a trusted affiliate network.
+            </p>
+          </div>
         </div>
 
+        <!-- What We Offer -->
+        <div class="menu-item">
+          <span>Offer</span>
+          <div class="tooltip">
+            <h4>What We Offer</h4>
+            <ul>
+              <li>Product Recommendations</li>
+              <li>Guided Shopping Experience</li>
+              <li>Affiliate Connections</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Why Choose Us -->
+        <div class="menu-item">
+          <span>Why Us</span>
+          <div class="tooltip">
+            <h4>Why Choose Us</h4>
+            <ul>
+              <li>Right to Price, Right to Product</li>
+              <li>Tailored Recommendations</li>
+              <li>Trustworthy Affiliate Network</li>
+              <li>Exceptional Support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
     <div class="footer-connect animate">
-        <h3>Connect With Us</h3>
-        <p>Have questions or need assistance? We’d love to hear from you! Feel free to reach out to our friendly team and explore all that 3MADZ has to offer.</p>
-        <p>Thank you for trusting <strong>3MADZ</strong> as your go-to affiliate agency. Together, let’s make smart shopping simpler!</p>
+      <h3>Connect With Us</h3>
+      <p>
+        Have questions or need assistance? We’d love to hear from you! Feel free
+        to reach out to our friendly team and explore all that 3MADZ has to
+        offer.
+      </p>
+      <p>
+        Thank you for trusting <strong>3MADZ</strong> as your go-to affiliate
+        agency. Together, let’s make smart shopping simpler!
+      </p>
     </div>
     <!-- Contact Us Section -->
-    <section id="contact" >
-        <div class="footer">
-            
-            <div class="footer-container">
-                
-                <!-- Language and Location -->
-                <div class="footer-top">
-                    <div class="language">
-                        <i class="fa-solid fa-globe"></i> English
-                        <i class="fa-solid fa-caret-down"></i>
-                    </div>
-                    <div class="location">
-                        <i class="fa-solid fa-map-marker-alt"></i> India
-                    </div>
-                </div>
-        
-                <!-- Social Media Links -->
-                <div class="footer-social">
-                    <p>Follow us on</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="mailto:3madzhub@gmail.com" target="_blank">
-                            <i class="fa-solid fa-envelope"></i>
-                        </a>
-                        <a href="https://t.me/madz3hub"><i class="fa-brands fa-telegram"></i></a>
-                    </div>
-                </div>
-               <!-- Logo -->
-                <div class="footer-logo">
-                    <img src="himg/logo1.png" alt="3MADZ Logo">
-                </div>
+    <section id="contact">
+      <div class="footer">
+        <div class="footer-container">
+          <!-- Language and Location -->
+          <div class="footer-top">
+            <div class="language">
+              <i class="fa-solid fa-globe"></i> English
+              <i class="fa-solid fa-caret-down"></i>
             </div>
-        </div>        
+            <div class="location">
+              <i class="fa-solid fa-map-marker-alt"></i> India
+            </div>
+          </div>
+
+          <!-- Social Media Links -->
+          <div class="footer-social">
+            <p>Follow us on</p>
+            <div class="social-icons">
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="mailto:3madzhub@gmail.com" target="_blank">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+              <a href="https://t.me/madz3hub"
+                ><i class="fa-brands fa-telegram"></i
+              ></a>
+            </div>
+          </div>
+          <!-- Logo -->
+          <div class="footer-logo">
+            <img src="himg/logo1.png" alt="3MADZ Logo" />
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Bootstrap JS and Popper -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-    
+
     <!-- JavaScript for Animations -->
     <script src="script.js"></script>
     <script src="product.js"></script>
-</body>
+  </body>
 </html>
-
