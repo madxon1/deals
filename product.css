@@ -1,5 +1,7 @@
 #product {
-  font-family: Arial, sans-serif;
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
   padding: 20px;
   background-color: #f9f2;
   display: flex;
