@@ -1,6 +1,6 @@
 #product {
-  font-family: "PT Serif", serif;
-  font-weight: 400;
+  font-family: "Alike Angular", serif;
+  font-weight: 300;
   font-style: normal;
   padding: 20px;
   background-color: #f9f2;
@@ -176,13 +176,13 @@
 }
 
 .product-info h3 {
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin: 7px 0;
   color: #333;
 }
 
 .product-info p {
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: #666;
   margin-bottom: 8px;
 }
