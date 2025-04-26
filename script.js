@@ -1,24 +1,14 @@
+const listItems = document.querySelectorAll('.list');
+function activateLink() {
+  listItems.forEach(item => item.classList.remove('active'));
+  this.classList.add('active');
+}
+listItems.forEach(item => item.addEventListener('click', activateLink));
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
-  // Smooth Scrolling for Navbar Links
-  document.querySelectorAll(".nav").forEach((link) => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault(); // Prevent default anchor click behavior
-      const targetId = this.getAttribute("href").substring(1); // Get the section ID
-      const targetElement = document.getElementById(targetId); // Get the section element
-      const offset = 140; // Adjust for fixed logo + navbar height
-
-      if (targetElement) {
-        const elementPosition =
-          targetElement.getBoundingClientRect().top + window.pageYOffset;
-        const offsetPosition = elementPosition - offset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth", // Smooth scrolling
-        });
-      }
-    });
-  });
+  
 
   // Intersection Observer for Animations
   const elements = document.querySelectorAll(".animate");
@@ -97,3 +87,29 @@ document.addEventListener("DOMContentLoaded", () => {
     carouselInner.appendChild(item);
   });
 });
+
+//location change
+document.addEventListener("DOMContentLoaded", function () {
+  let locationSelect = document.getElementById("locationSelect");
+
+  // Load saved location from local storage
+  let savedLocation = localStorage.getItem("userLocation");
+  
+  if (savedLocation) {
+    locationSelect.value = savedLocation;
+  }
+});
+
+function redirectToLocation() {
+  let select = document.getElementById("locationSelect");
+  let selectedValue = select.value;
+
+  // Save location in local storage
+  localStorage.setItem("userLocation", selectedValue);
+
+  // Redirect to selected location page
+  window.location.href = selectedValue;
+}
+
+//dynamic year
+document.getElementById("year").textContent = new Date().getFullYear();

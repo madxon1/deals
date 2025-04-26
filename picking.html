@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MADXORFINDS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .profile-logo {
+            width: 140px;
+            border-radius: 50%;
+            background-color: #000000;
+        }
+        .social-icons {
+            margin: 15px 0;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 24px;
+            color: black;
+        }
+        .storefront {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 300px;
+            background-color: #34b1db;
+            color: black;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px auto;
+            font-size: 16px;
+            cursor: pointer;
+            border: 2px solid black;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .storefront:hover {
+            background-color: #000000;
+            transform: scale(1.05);
+            color: #34b1db;
+            border: 2px solid #34b1db;
+        }
+        .storefront img {
+            width: 55px;
+            margin-right: 0px;
+            padding-right: 5px;
+            padding-left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo/madxorfinds.png" alt="Profile Logo" class="profile-logo">
+        <h2>MADXORFINDS</h2>
+        <p>As an Amazon Associate I earn from qualifying purchases.</p>
+        <div class="social-icons">
+            <a href="#">📷</a>
+            <a href="#">🎵</a>
+            <a href="#">▶️</a>
+            <a href="#">📘</a>
+            <a href="#">✉️</a>
+        </div>
+        <div class="storefront" onclick="window.location.href='https://amazon.in'">
+          <img src="logo/INDIA.jpg" alt="INDIA Flag"> Amazon Storefront IN
+      </div>
+        <div class="storefront" onclick="window.location.href='https://amazon.com'">
+            <img src="logo/USA.png" alt="USA Flag"> Amazon Storefront USA
+        </div>
+        <div class="storefront" onclick="window.location.href='https://amazon.co.uk'">
+            <img src="logo/UK.jpg" alt="UK Flag"> Amazon Storefront UK
+        </div>
+        <div class="storefront" onclick="window.location.href='https://amazon.ca'">
+            <img src="logo/u" alt="Canada Flag"> Amazon Storefront CA
+        </div>
+    </div>
+</body>
+</html>

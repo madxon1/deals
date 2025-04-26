@@ -1,0 +1,93 @@
+<div class="filter-search p-4">
+  <div class="flex-container mb-1">
+    <!-- Search Bar Wrapper -->
+    <div class="search-wrapper">
+        <span class="search-icon">&#128269;</span>
+        <input type="text" id="search-bar" placeholder="Search all programs" />
+        <span id="clear-icon" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 cursor-pointer hidden">&#10005;</span>
+        <ul id="suggestion-list" class="absolute top-full  rounded-lg shadow-lg  hidden"></ul>
+    </div>
+
+    <!-- Filter Button -->
+    <button id="filter-toggle" class="filter-button">
+        <img src="himg/icon-filter.jpg" alt="Filter Icon" />
+        <span>Filter(s)</span>
+    </button>
+</div>
+
+    <!-- Filter Section -->
+    <div id="filter-section" class="hidden bg-white p-4 rounded-lg shadow mb-4">
+        <h2 class="text-lg font-semibold mb-4">Genre(s) <span id="genre-count" class="text-blue-500">(0)</span></h2>
+        <hr class="my-4 border-t border-gray-500">
+        <div class="grid grid-cols-1 gap-4">
+            <div>
+                <h3 class="font-semibold"></h3>
+                <div class="flex flex-wrap gap-2">
+                    <button class="filter-btn" data-filter="genre" data-value="Fiction-Literary">Literary</button>
+                    <button class="filter-btn" data-filter="genre" data-value="Fiction-Mystery">Mystery</button>
+                    <button class="filter-btn" data-filter="genre" data-value="Fiction-Romance">Romance</button>
+                    <button class="filter-btn" data-filter="genre" data-value="Fiction-Fantasy">Fantasy</button>
+                    <button class="filter-btn" data-filter="genre" data-value="Fiction-Science">Science</button>
+                    <button class="filter-btn" data-filter="genre" data-value="Fiction-Horror">Horror</button>
+                    <button class="filter-btn" data-filter="genre" data-value="Fiction-Contemporary">Contemporary</button>
+                </div>
+            </div>
+            <hr class=" border-t border-gray-500">
+            <div>
+                <h3 class="font-semibold">Non-Fiction</h3>
+                <div class="flex flex-wrap gap-2">
+                    <button class="filter-btn" data-filter="genre" data-value="Non-Fiction-Biography">Biography</button>
+                    <button class="filter-btn" data-filter="genre" data-value="Non-Fiction-Memoirs">Memoirs</button>
+                    <button class="filter-btn" data-filter="genre" data-value="Non-Fiction-Self-Help">Self-Help</button>
+                    <button class="filter-btn" data-filter="genre" data-value="Non-Fiction-Business">Business</button>
+                    <button class="filter-btn" data-filter="genre" data-value="Non-Fiction-Historical">Historical</button>
+                    <button class="filter-btn" data-filter="genre" data-value="Non-Fiction-Travel">Travel</button>
+                    <button class="filter-btn" data-filter="genre" data-value="Non-Fiction-TrueCrime">True Crime</button>
+                </div>
+            </div>
+            <hr class=" border-t border-gray-500">
+            <div>
+                <h3 class="font-semibold">Poetry</h3>
+                <div class="flex flex-wrap gap-2">
+                    <button class="filter-btn" data-filter="genre" data-value="Poetry-Narrative">Narrative</button>
+                    <button class="filter-btn" data-filter="genre" data-value="Poetry-Lyrics">Lyrics</button>
+                    <button class="filter-btn" data-filter="genre" data-value="Poetry-FreeVerse">Free Verse</button>
+                    <button class="filter-btn" data-filter="genre" data-value="Poetry-SpokenWord">Spoken Word</button>
+                </div>
+            </div>
+            <hr class=" border-t border-gray-500">
+            <div>
+                <h3 class="font-semibold">Plays</h3>
+                <div class="flex flex-wrap gap-2">
+                    <button class="filter-btn" data-filter="genre" data-value="Plays-Comedy">Comedy</button>
+                    <button class="filter-btn" data-filter="genre" data-value="Plays-Drama">Drama</button>
+                    <button class="filter-btn" data-filter="genre" data-value="Plays-Tragedy">Tragedy</button>
+                    <button class="filter-btn" data-filter="genre" data-value="Plays-Tragicomedy">Tragicomedy</button>
+                    <button class="filter-btn" data-filter="genre" data-value="Plays-Historical">Historical</button>
+                    <button class="filter-btn" data-filter="genre" data-value="Plays-Musical">Musical</button>
+                    <button class="filter-btn" data-filter="genre" data-value="Plays-Absurdist">Absurdist</button>
+                    <button class="filter-btn" data-filter="genre" data-value="Plays-Morality">Morality</button>
+                </div>
+            </div>
+            <hr class=" border-t border-gray-500">
+            <div>
+                <h3 class="font-semibold">Graphic Novel</h3>
+                <div class="flex flex-wrap gap-2">
+                    <button class="filter-btn" data-filter="genre" data-value="GraphicNovel-SuperHero">Super Hero</button>
+                    <button class="filter-btn" data-filter="genre" data-value="GraphicNovel-Manga">Manga</button>
+                    <button class="filter-btn" data-filter="genre" data-value="GraphicNovel-Fantasy">Fantasy</button>
+                    <button class="filter-btn" data-filter="genre" data-value="GraphicNovel-ScienceFiction">Science Fiction</button>
+                    <button class="filter-btn" data-filter="genre" data-value="GraphicNovel-Drama">Drama</button>
+                    <button class="filter-btn" data-filter="genre" data-value="GraphicNovel-Horror">Horror</button>
+                    <button class="filter-btn" data-filter="genre" data-value="GraphicNovel-Biographical">Biographical</button>
+                    <button class="filter-btn" data-filter="genre" data-value="GraphicNovel-Comedy">Comedy</button>
+                </div>
+            </div>
+            <hr class=" border-t border-gray-500">
+        </div>
+        <div class="mt-4 flex justify-between">
+            <button id="clear-filters" class="text-red-500 underline">Clear Filters</button>
+            <button id="apply-filters" class="bg-green-500 text-white py-2 px-4 rounded-lg">Apply Filters</button>
+        </div>
+    </div>
+    </div>

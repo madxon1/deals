@@ -1,0 +1,158 @@
+
+  .filter-search {
+      top:0px
+  }
+    /* Flex container for search bar and filter button */
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: insert 0px 4px 8px rgba(133, 130, 130, 0.1);
+    border-radius: 25px;
+    padding: 10px 20px;
+    width: 95%;
+    max-width: 800px;
+    z-index: 1000;
+}
+
+/* Search bar container */
+.search-wrapper {
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    flex: 1;
+    min-width: 200px; /* Ensures it shrinks properly on smaller screens */
+}
+
+/* Search input */
+.search-wrapper input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 40px; /* Space for the search icon */
+    padding-right: 40px; /* Space for clear button */
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2), 4px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Icons inside search bar */
+.search-wrapper span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+}
+
+/* Search icon */
+.search-wrapper .search-icon {
+    left: 15px;
+}
+
+/* Clear button */
+.search-wrapper .clear-icon {
+    right: 10px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+}
+
+/* Suggestion list */
+#suggestion-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    color: white;
+    background: rgba(72, 72, 72, 0.55) ;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+#suggestion-list li:hover{
+    background:rgba(47, 47, 47, 0.55);
+}
+/* Filter button */
+.filter-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 8px 12px;
+    background: #007bff;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    min-width: 120px;
+    box-shadow: 0px 0px 5px rgba(0, 89, 255, 0.8);
+
+}
+
+#filter-toggle::after {
+            content: ' ▲';
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+        #filter-toggle.active::after {
+            transform: rotate(180deg);
+        }
+
+.filter-button:hover {
+    background: #0056b3;
+}
+
+.filter-button img {
+    width: 24px;
+    height: auto;
+}
+
+#filter-section {
+    width: 95%;
+    max-width: 800px;
+    margin: 0 auto; /* Centering Fix */
+    box-shadow: 0px 4px 8px rgba(133, 130, 130, 0.1); /* Fixing 'insert' typo */
+  
+}
+
+
+
+.filter-btn{
+    border-radius: 40px;
+    background-color:rgb(255, 255, 255);
+    color: black;
+    padding: 8px;
+    padding-top:4px;
+    padding-bottom:4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+border: 1px inset blue;
+
+}
+
+#no-results {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #888;
+}
+
+#no-results img {
+    display: block;
+    margin: 0 auto 15px; /* Centers the image horizontally */
+    width: 150px;
+    opacity: 0.8;
+}
+
+
+    

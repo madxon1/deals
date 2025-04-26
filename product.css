@@ -1,81 +1,29 @@
-#product {
+#product-list {
+  top:-20px;
   font-family: "Nunito Sans", serif;
   padding: 20px;
-  background-color: #f9f2;
-  display: flex;
+  /* background-color: #f9f2; */
+  display: grid;
   justify-content: center;
   align-items: flex-start;
   flex-direction: row;
   position: relative;
   margin: 0px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: -80px;
 }
 
 /* Category Section */
 .category-section {
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   text-align: center;
   justify-content: center;
+  place-items: center;
 }
 
-.category-custom {
-  background-color: rgb(239, 140, 48); /* Red background */
-  color: #333; /* Text color */
-  font-size: 30px; /* Font size */
-  padding: 0px 5px; /* Padding for size */
-  margin: 5px 45px; /* Center the button */
-  border: none; /* Remove default border */
-  border-radius: 30px; /* Rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
-  cursor: default; /*Pointer cursor on hover */
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animation on hover */
-  margin-bottom: 10px;
-  display: inline-block;
-}
-
-.category-custom:hover {
-  transform: translateY(-3px); /* Slight lift effect */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
-}
-
-.pro-categories {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  margin-bottom: 20px;
-  gap: 5px;
-  overflow-x: auto;
-  scrollbar-width: none;
-  position: relative;
-}
-
-.pro-categories button {
-  padding: 5px 10px;
-  border: none;
-  border-radius: 10px;
-  background-color: #d8bca2;
-  color: #000000;
-  cursor: pointer;
-  font-size: 1.1rem;
-  white-space: nowrap;
-}
-
-@media (max-width: 768px) {
-  .pro-categories {
-    justify-content: space-evenly;
-  }
-}
-
-@media (min-width: 1024px) {
-  .pro-categories {
-    justify-content: center;
-  }
-}
-
-.pro-categories button.active {
-  background-color: #7c4d33;
-  color: #ffffff;
-}
 
 .product-grid {
   display: flex;
@@ -88,30 +36,8 @@
   margin: 0 auto;
   padding-bottom: 70px;
   overflow: hidden;
-  max-height: calc(
-    2 * 360px + 30px
-  ); /* Show only 2 rows (height of 2 product cards + gap) */
-  transition: max-height 0.9s ease;
 }
 
-.product-grid-1.expanded {
-  max-height: none;
-}
-.product-grid-2.expanded {
-  max-height: none;
-}
-.product-grid-3.expanded {
-  max-height: none;
-}
-.product-grid-4.expanded {
-  max-height: none;
-}
-.product-grid-5.expanded {
-  max-height: none;
-}
-.product-grid-6.expanded {
-  max-height: none;
-}
 
 .product-card {
   background: #fff;
@@ -126,7 +52,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 360px;
+  height: 330px;
 }
 
 /* Apply background color to each product grid */
@@ -171,18 +97,24 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  
 }
 
 .product-info h3 {
   font-size: 1.11em;
-  margin: 7px 0;
+  margin-top: 7px ;
   color: #333;
 }
 
 .product-info p {
   font-size: 0.8em;
   color: #666;
-  margin-bottom: 8px;
+  margin-bottom: 3px;
+  max-height: 90px; 
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+  padding-right: 5px;
 }
 
 .product-info a {
@@ -199,40 +131,27 @@
   text-decoration: none;
   color: #fff;
   margin: 0px;
+  
 }
 
 .product-info a:hover {
   background-color: #218838;
 }
 
-.load-more {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
 
-.load-more:hover {
-  background-color: #0056b3;
-}
 
 #backToTop {
   position: fixed;
   bottom: 10px; /* Default position above the viewport's bottom */
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Ensure perfect centering */
-  width: 60px;
-  height: 60px;
-  background-color: rgba(128, 128, 128, 0.6); /* Button background */
+  width: 45px;
+  height: 45px;
+  background-color: rgba(114, 214, 236, 0.96); /* Button background */
   color: white; /* Arrow color */
   border: none;
   border-radius: 50%; /* Circular button */
-  font-size: 24px; /* Arrow size */
+  font-size: 23px; /* Arrow size */
   cursor: pointer;
   box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.2);
   opacity: 0; /* Initially hidden */
@@ -254,3 +173,65 @@
   opacity: 0; /* Fully transparent */
   visibility: hidden; /* Prevent interaction */
 }
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.pagination button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+#pageNumbers {
+  display: flex;
+  gap: 5px;
+  width:50%;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.page-number {
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.page-number.active {
+  background-color: #007BFF;
+  color: white;
+  font-weight: bold;
+  place-item: center;
+}
+
+/* Hide products by default */
+.product-card.hidden {
+  display: none;
+}
+
+.page-number:hover {
+  background-color: #007BFF;
+  color: white;
+}
+
+/* Styling for page numbers when active */
+.page-number.active:hover {
+  background-color: #0056b3; /* Slightly darker blue when hovered */
+}
+
+

@@ -30,6 +30,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="product.css" />
+    <link rel="stylesheet" href="filter.css" />
   </head>
   <body
     data-bs-spy="scroll"
@@ -43,27 +44,38 @@
       <div class="hub-container">
         <div class="hub-text">BOOK</div>
       </div>
+      <!-- Navigation Bar -->
+      <div class="navigation">
+        <ul>
+          <li class="list">
+            <a href="#contact">
+              <span class="icon">
+                <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+              </span>
+              <span class="text">Contact</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="#about">
+              <span class="icon">
+                <ion-icon name="book-outline"></ion-icon>
+              </span>
+              <span class="text">About</span>
+            </a>
+          </li>
+          <li class="list active">
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="home-outline"></ion-icon>
+              </span>
+              <span class="text">Home</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-      <!-- Toggler Button -->
-      <button class="toggler" onclick="toggleNav()">☰</button>
-      <ul class="nav-list" id="nav-list">
-        <li><a href="home">Home</a></li>
-        <li class="dropdown">
-          <a class="drop-btn">Category▼</a>
-          <div class="dropdown-content">
-            <a class="nav" href="#Fiction">Fiction</a>
-            <a class="nav" href="#Non-Fiction">Non-Fiction</a>
-            <a class="nav" href="#Poetry">Poetry</a>
-            <a class="nav" href="#Graphic Navel">Graphic Navel</a>
-            <a class="nav" href="#Plays">Plays</a>
-          </div>
-        </li>
-        <li><a class="nav" href="#about">About</a></li>
-        <li><a class="nav" href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    
+    
 
     <!-- Carousel Section -->
     <section id="home">
@@ -163,26 +175,117 @@
         </ol>
       </div>
     </section>
-    <!-- product -->
-    <section id="product">
-      <div class="category-section">
-        <!-- /* Fiction */ -->
-        <div id="Fiction" class="category-custom">Fiction</div>
-        <div class="pro-categories pro-categories-1">
-          <button class="active" onclick="filterProducts1('all-1')">All</button>
-          <button onclick="filterProducts1('Literary')">Literary</button>
-          <button onclick="filterProducts1('Mystery')">Mystery</button>
-          <button onclick="filterProducts1('Romance')">Romance</button>
-          <button onclick="filterProducts1('Fantasy')">Fantasy</button>
-          <button onclick="filterProducts1('Science')">Science</button>
-          <button onclick="filterProducts1('Horror')">Horror</button>
-          <button onclick="filterProducts1('Contemporary')">
-            Contemporary
-          </button>
+
+
+    <!-- Search Bar and Filter Toggle -->
+  <div class="filter-search p-1">
+    <div class="flex-container mb-0">
+      <!-- Search Bar Wrapper -->
+      <div class="search-wrapper">
+          <span class="search-icon">&#128269;</span>
+          <input type="text" id="search-bar" placeholder="Search all programs" />
+          <span id="clear-icon" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 cursor-pointer hidden">&#10005;</span>
+          <ul id="suggestion-list" class="absolute top-full  rounded-lg shadow-lg  hidden"></ul>
+      </div>
+  
+      <!-- Filter Button -->
+      <button id="filter-toggle" class="filter-button">
+          <img src="himg/icon-filter.jpg" alt="Filter Icon" />
+          <span>Filter(s)</span>
+      </button>
+    </div> 
+  
+      <!-- Filter Section -->
+      <div id="filter-section" class="hidden bg-white p-4 rounded-lg shadow mt-0">
+        <div class="mt-4 flex  justify-between filter-top">
+          <h2 class="text-lg font-semibold mb-0">Genre(s) <span id="genre-count" class="text-blue-500">(0)</span></h2>
+          <button id="apply-filters" class="text-blue-500 hidden">Apply Filters</button>
+          <button id="clear-filters" class="text-red-500 underline">Clear Filters</button>
+        </div> 
+        <div class="grid grid-cols-1 gap-4">
+          <hr class=" border-t border-gray-500">
+              <div>
+                  <h3 class="font-semibold">Fiction</h3>
+                  <div class="flex flex-wrap gap-2">
+                      <button class="filter-btn" data-filter="genre" data-value="Fiction-Literary">Literary</button>
+                      <button class="filter-btn" data-filter="genre" data-value="Fiction-Mystery">Mystery</button>
+                      <button class="filter-btn" data-filter="genre" data-value="Fiction-Romance">Romance</button>
+                      <button class="filter-btn" data-filter="genre" data-value="Fiction-Fantasy">Fantasy</button>
+                      <button class="filter-btn" data-filter="genre" data-value="Fiction-Science">Science</button>
+                      <button class="filter-btn" data-filter="genre" data-value="Fiction-Horror">Horror</button>
+                      <button class="filter-btn" data-filter="genre" data-value="Fiction-Contemporary">Contemporary</button>
+                  </div>
+              </div>
+              <hr class=" border-t border-gray-500">
+              <div>
+                  <h3 class="font-semibold">Non-Fiction</h3>
+                  <div class="flex flex-wrap gap-2">
+                      <button class="filter-btn" data-filter="genre" data-value="Non-Fiction-Biography">Biography</button>
+                      <button class="filter-btn" data-filter="genre" data-value="Non-Fiction-Memoirs">Memoirs</button>
+                      <button class="filter-btn" data-filter="genre" data-value="Non-Fiction-Self-Help">Self-Help</button>
+                      <button class="filter-btn" data-filter="genre" data-value="Non-Fiction-Business">Business</button>
+                      <button class="filter-btn" data-filter="genre" data-value="Non-Fiction-Historical">Historical</button>
+                      <button class="filter-btn" data-filter="genre" data-value="Non-Fiction-Travel">Travel</button>
+                      <button class="filter-btn" data-filter="genre" data-value="Non-Fiction-TrueCrime">True Crime</button>
+                  </div>
+              </div>
+              <hr class=" border-t border-gray-500">
+              <div>
+                  <h3 class="font-semibold">Poetry</h3>
+                  <div class="flex flex-wrap gap-2">
+                      <button class="filter-btn" data-filter="genre" data-value="Poetry-Narrative">Narrative</button>
+                      <button class="filter-btn" data-filter="genre" data-value="Poetry-Lyrics">Lyrics</button>
+                      <button class="filter-btn" data-filter="genre" data-value="Poetry-FreeVerse">Free Verse</button>
+                      <button class="filter-btn" data-filter="genre" data-value="Poetry-SpokenWord">Spoken Word</button>
+                  </div>
+              </div>
+              <hr class=" border-t border-gray-500">
+              <div>
+                  <h3 class="font-semibold">Plays</h3>
+                  <div class="flex flex-wrap gap-2">
+                      <button class="filter-btn" data-filter="genre" data-value="Plays-Comedy">Comedy</button>
+                      <button class="filter-btn" data-filter="genre" data-value="Plays-Drama">Drama</button>
+                      <button class="filter-btn" data-filter="genre" data-value="Plays-Tragedy">Tragedy</button>
+                      <button class="filter-btn" data-filter="genre" data-value="Plays-Tragicomedy">Tragicomedy</button>
+                      <button class="filter-btn" data-filter="genre" data-value="Plays-Historical">Historical</button>
+                      <button class="filter-btn" data-filter="genre" data-value="Plays-Musical">Musical</button>
+                      <button class="filter-btn" data-filter="genre" data-value="Plays-Absurdist">Absurdist</button>
+                      <button class="filter-btn" data-filter="genre" data-value="Plays-Morality">Morality</button>
+                  </div>
+              </div>
+              <hr class=" border-t border-gray-500">
+              <div>
+                  <h3 class="font-semibold">Graphic Novel</h3>
+                  <div class="flex flex-wrap gap-2">
+                      <button class="filter-btn" data-filter="genre" data-value="GraphicNovel-SuperHero">Super Hero</button>
+                      <button class="filter-btn" data-filter="genre" data-value="GraphicNovel-Manga">Manga</button>
+                      <button class="filter-btn" data-filter="genre" data-value="GraphicNovel-Fantasy">Fantasy</button>
+                      <button class="filter-btn" data-filter="genre" data-value="GraphicNovel-ScienceFiction">Science Fiction</button>
+                      <button class="filter-btn" data-filter="genre" data-value="GraphicNovel-Drama">Drama</button>
+                      <button class="filter-btn" data-filter="genre" data-value="GraphicNovel-Horror">Horror</button>
+                      <button class="filter-btn" data-filter="genre" data-value="GraphicNovel-Biographical">Biographical</button>
+                      <button class="filter-btn" data-filter="genre" data-value="GraphicNovel-Comedy">Comedy</button>
+                  </div>
+              </div>
+              
         </div>
-        <div class="product-grid product-grid-1">
+      </div> 
+  </div>
+
+      <!-- No Results Message -->
+      <div id="no-results" >
+        <img src="himg/noresult.png" alt="No Results" style="width: 150px; ; margin-bottom: 15px; opacity: 0.8; " />
+        <p style="font-size: 20px; color: #333; font-weight: bold; margin-bottom: 10px;"> Oh no! We couldn’t find any results for
+       <span style="color: #007bff;">‘<span id="search-term"></span>’</span>. </p>
+        <p style="font-size: 16px; color: #555; margin-bottom: 20px;">  Don’t worry—try a different keyword or adjust the filter options to explore more books!</p>
+      </div>
+    <!-- product -->
+    <section id="product-list" class="productList ">
+      <div class="category-section">
+        <!-- Fiction -->
+        <div class="product-grid" id="productGrid">
           <!-- Literary -->
-          <div class="product-card product-card-1" data-category="Literary">
+          <div class="product-card" data-genre="Fiction-Literary">
             <img
               class="product-image"
               src="bimg/fiction/To Kill a Mockingbird.jpg"
@@ -199,7 +302,7 @@
             </div>
           </div>
           <!-- Mystery -->
-          <div class="product-card product-card-1" data-category="Mystery">
+          <div class="product-card" data-genre="Fiction-Mystery">
             <img
               class="product-image"
               src="bimg/fiction/The Bandit Queens.jpg"
@@ -216,7 +319,7 @@
             </div>
           </div>
           <!-- Romance -->
-          <div class="product-card product-card-1" data-category="Romance">
+          <div class="product-card " data-genre="Fiction-Romance">
             <img
               class="product-image"
               src="bimg/fiction/The Midnight Library.jpg"
@@ -233,7 +336,7 @@
             </div>
           </div>
           <!-- Fantasy -->
-          <div class="product-card product-card-1" data-category="Fantasy">
+          <div class="product-card " data-genre="Fiction-Fantasy">
             <img
               class="product-image"
               src="bimg/fiction/Calcutta Chromosome.jpg"
@@ -250,7 +353,7 @@
             </div>
           </div>
           <!-- Science -->
-          <div class="product-card product-card-1" data-category="Science">
+          <div class="product-card " data-genre="Fiction-Science">
             <img
               class="product-image"
               src="bimg/fiction/Dune.jpg"
@@ -267,7 +370,7 @@
             </div>
           </div>
           <!-- Horror -->
-          <div class="product-card product-card-1" data-category="Horror">
+          <div class="product-card " data-genre="Fiction-Horror">
             <img
               class="product-image"
               src="bimg/fiction/It.jpg"
@@ -284,7 +387,7 @@
             </div>
           </div>
           <!-- Contemporary  -->
-          <div class="product-card product-card-1" data-category="Contemporary">
+          <div class="product-card " data-genre="Fiction-Contemporary">
             <img
               class="product-image"
               src="bimg/fiction/Wake Up, Life is Calling.jpg"
@@ -301,7 +404,7 @@
             </div>
           </div>
           <!-- 2nd Round -->
-          <div class="product-card product-card-1" data-category="Literary">
+          <div class="product-card " data-genre="Fiction-Literary">
             <img
               class="product-image"
               src="bimg/fiction/The Road.jpg"
@@ -317,7 +420,7 @@
               <a href="https://amzn.to/4iKVAtr">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card product-card-1" data-category="Mystery">
+          <div class="product-card " data-genre="Fiction-Mystery">
             <img
               class="product-image"
               src="bimg/fiction/The Widows of Malabar Hill.jpg"
@@ -333,7 +436,7 @@
               <a href="https://amzn.to/4iAoVXu">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card product-card-1" data-category="Fantasy">
+          <div class="product-card " data-genre="Fiction-Fantasy">
             <img
               class="product-image"
               src="bimg/fiction/I Hear You.jpg"
@@ -349,7 +452,7 @@
               <a href="https://amzn.to/3ZVDJZe">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card product-card-1" data-category="Science">
+          <div class="product-card " data-genre="Fiction-Science">
             <img
               class="product-image"
               src="bimg/fiction/A Brief History Of Time.jpg"
@@ -365,7 +468,7 @@
               <a href="https://amzn.to/3BJEbRd">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card product-card-1" data-category="Mystery">
+          <div class="product-card " data-genre="Fiction-Mystery">
             <img
               class="product-image"
               src="bimg/fiction/Cut Like Wound.jpg"
@@ -381,25 +484,11 @@
               <a href="https://amzn.to/3OWiU9V">Click to Shop</a>
             </div>
           </div>
-        </div>
-        <button id="load-more-1" class="load-more product-card-1">
-          More Books...
-        </button>
+        
         <!-- /* Non-Fiction */ -->
-        <div id="Non-Fiction" class="category-custom">Non-Fiction</div>
-        <div class="pro-categories pro-categories-2">
-          <button class="active" onclick="filterProducts2('all-2')">All</button>
-          <button onclick="filterProducts2('Biographies')">Biographies</button>
-          <button onclick="filterProducts2('Memoirs')">Memoirs</button>
-          <button onclick="filterProducts2('Self-Help')">Self-Help</button>
-          <button onclick="filterProducts2('Business')">Business</button>
-          <button onclick="filterProducts2('Historical')">Historical</button>
-          <button onclick="filterProducts2('Travel')">Travel</button>
-          <button onclick="filterProducts2('True Crime')">True Crime</button>
-        </div>
-        <div class="product-grid product-grid-2">
-          <!-- Biographyies-->
-          <div class="product-card product-card-2" data-category="Biographies">
+        
+          <!-- Biography-->
+          <div class="product-card " data-genre="Non-Fiction-Biography">
             <img
               class="product-image"
               src="bimg/non-fic/Homeless.jpg"
@@ -416,7 +505,7 @@
             </div>
           </div>
           <!-- Memoirs-->
-          <div class="product-card product-card-2" data-category="Memoirs">
+          <div class="product-card " data-genre="Non-Fiction-Memoirs">
             <img
               class="product-image"
               src="bimg/non-fic/Writing Fire.jpg"
@@ -433,7 +522,7 @@
             </div>
           </div>
           <!-- Self-Help -->
-          <div class="product-card product-card-2" data-category="Self-Help">
+          <div class="product-card " data-genre="Non-Fiction-Self-Help">
             <img
               class="product-image"
               src="bimg/non-fic/Atomic Habits.jpg"
@@ -450,7 +539,7 @@
             </div>
           </div>
           <!-- Business-->
-          <div class="product-card product-card-2" data-category="Business">
+          <div class="product-card " data-genre="Non-Fiction-Business">
             <img
               class="product-image"
               src="bimg/non-fic/Rich Dad Poor Dad.jpg "
@@ -467,7 +556,7 @@
             </div>
           </div>
           <!-- Historical -->
-          <div class="product-card product-card-2" data-category="Historical">
+          <div class="product-card " data-genre="Non-Fiction-Historical">
             <img
               class="product-image"
               src="bimg/non-fic/The Indian Metropolis.jpg"
@@ -484,7 +573,7 @@
             </div>
           </div>
           <!-- Travel -->
-          <div class="product-card product-card-2" data-category="Travel">
+          <div class="product-card " data-genre="Non-Fiction-Travel">
             <img
               class="product-image"
               src="bimg/non-fic/Chasing The Monsoon.jpg"
@@ -501,7 +590,7 @@
             </div>
           </div>
           <!-- True Crime -->
-          <div class="product-card product-card-2" data-category="True Crime">
+          <div class="product-card " data-genre="Non-Fiction-TrueCrime">
             <img
               class="product-image"
               src="bimg/non-fic/In Cold Blood.jpg"
@@ -518,7 +607,7 @@
             </div>
           </div>
           <!-- 2nd Round -->
-          <div class="product-card product-card-2" data-category="Memoirs">
+          <div class="product-card " data-genre="Non-Fiction-Memoirs">
             <img
               class="product-image"
               src="bimg/non-fic/Educated.jpg"
@@ -534,7 +623,7 @@
               <a href="https://amzn.to/4iFwWKG">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card product-card-2" data-category="Self-Help">
+          <div class="product-card " data-genre="Non-Fiction-Self-Help">
             <img
               class="product-image"
               src="bimg/non-fic/The Psychology of Money.jpg"
@@ -550,7 +639,7 @@
               <a href="https://amzn.to/4gAwfRc">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card product-card-2" data-category="Self-Help">
+          <div class="product-card " data-genre="Non-Fiction-Self-Help">
             <img
               class="product-image"
               src="bimg/non-fic/LIGHT FROM MANY LAMPS.jpg"
@@ -566,7 +655,7 @@
               <a href="https://amzn.to/48KxYAw">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card product-card-2" data-category="Self-Help">
+          <div class="product-card " data-genre="Non-Fiction-Self-Help">
             <img
               class="product-image"
               src="bimg/non-fic/Mark Manson Boxset.jpg"
@@ -582,22 +671,10 @@
               <a href="https://amzn.to/4iYVJK2">Click to Shop</a>
             </div>
           </div>
-        </div>
-        <button id="load-more-2" class="load-more product-card-2">
-          More Books...
-        </button>
         <!-- /* Poetry */ -->
-        <div id="Poetry" class="category-custom">Poetry</div>
-        <div class="pro-categories pro-categories-3">
-          <button class="active" onclick="filterProducts3('all-3')">All</button>
-          <button onclick="filterProducts3('Narrative')">Narrative</button>
-          <button onclick="filterProducts3('Lyric')">Lyric</button>
-          <button onclick="filterProducts3('Free Verse')">Free Verse</button>
-          <button onclick="filterProducts3('Spoken Word')">Spoken Word</button>
-        </div>
-        <div class="product-grid product-grid-3">
+        
           <!-- Narrative -->
-          <div class="product-card product-card-3" data-category="Narrative">
+          <div class="product-card " data-genre="Poetry-Narrative">
             <img
               class="product-image"
               src="bimg/poetry/Odyssey.jpg"
@@ -614,7 +691,7 @@
             </div>
           </div>
           <!-- Lyric -->
-          <div class="product-card product-card-3" data-category="Lyric">
+          <div class="product-card " data-genre="Poetry-Lyrics">
             <img
               class="product-image"
               src="bimg/poetry/Rain Clouds.jpg"
@@ -631,7 +708,7 @@
             </div>
           </div>
           <!-- Free Verse -->
-          <div class="product-card product-card-3" data-category="Free Verse">
+          <div class="product-card " data-genre="Poetry-FreeVerse">
             <img
               class="product-image"
               src="bimg/poetry/Song of Myself.jpg"
@@ -648,7 +725,7 @@
             </div>
           </div>
           <!-- Spoken Word -->
-          <div class="product-card product-card-3" data-category="Spoken Word">
+          <div class="product-card " data-genre="Poetry-SpokenWord">
             <img
               class="product-image"
               src="bimg/poetry/The Hill We Climb.jpg"
@@ -665,7 +742,7 @@
             </div>
           </div>
           <!-- 2nd Round -->
-          <div class="product-card product-card-3" data-category="Narrative">
+          <div class="product-card " data-genre="Poetry-Narrative">
             <img
               class="product-image"
               src="bimg/poetry/The Rime of the Ancient Mariner.jpg"
@@ -681,7 +758,7 @@
               <a href="https://amzn.to/3P5tMm7">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card product-card-3" data-category="Lyric">
+          <div class="product-card " data-genre="Poetry-Lyrics">
             <img
               class="product-image"
               src="bimg/poetry/Sonnet 18.jpg"
@@ -697,7 +774,7 @@
               <a href="https://amzn.to/41KMCGE">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card product-card-3" data-category="Free Verse">
+          <div class="product-card " data-genre="Poetry-FreeVerse">
             <img
               class="product-image"
               src="bimg/poetry/The Waste Land.jpg"
@@ -714,7 +791,7 @@
             </div>
           </div>
           <!-- 3rd Round -->
-          <div class="product-card product-card-3" data-category="Lyric">
+          <div class="product-card " data-genre="Poetry-Lyrics">
             <img
               class="product-image"
               src="bimg/poetry/Ode to a Nightingale.jpg"
@@ -731,7 +808,7 @@
             </div>
           </div>
           <!-- 4th Round -->
-          <div class="product-card product-card-3" data-category="Lyric">
+          <div class="product-card " data-genre="Poetry-Lyrics">
             <img
               class="product-image"
               src="bimg/poetry/An Elegy Written in a Country Churchyard.jpg"
@@ -747,28 +824,10 @@
               <a href="https://amzn.to/3VOXdMO">Click to Shop</a>
             </div>
           </div>
-        </div>
-        <button id="load-more-3" class="load-more product-card-3">
-          More Books...
-        </button>
         <!-- /* Graphic Navel */ -->
-        <div id="Graphic Navel" class="category-custom">Graphic Navel</div>
-        <div class="pro-categories pro-categories-4">
-          <button class="active" onclick="filterProducts4('all-4')">All</button>
-          <button onclick="filterProducts4('Superhero')">Superhero</button>
-          <button onclick="filterProducts4('Manga')">Manga</button>
-          <button onclick="filterProducts4('Fantasy')">Fantasy</button>
-          <button onclick="filterProducts4('Sci-Fi')">Sci-Fi</button>
-          <button onclick="filterProducts4('Drama')">Drama</button>
-          <button onclick="filterProducts4('Horror')">Horror</button>
-          <button onclick="filterProducts4('Biographical')">
-            Biographical
-          </button>
-          <button onclick="filterProducts4('Comedy')">Comedy</button>
-        </div>
-        <div class="product-grid product-grid-4">
+        
           <!-- Superhero -->
-          <div class="product-card product-card-4" data-category="Superhero">
+          <div class="product-card " data-genre="GraphicNovel-SuperHero">
             <img
               class="product-image"
               src="bimg/graphic/The Amazing Spider-Man.jpg"
@@ -785,7 +844,7 @@
             </div>
           </div>
           <!-- Manga -->
-          <div class="product-card product-card-4" data-category="Manga">
+          <div class="product-card " data-genre="GraphicNovel-Manga">
             <img
               class="product-image"
               src="bimg/graphic/Naruto + Demonslayer.jpg"
@@ -802,7 +861,7 @@
             </div>
           </div>
           <!-- Fantasy -->
-          <div class="product-card product-card-4" data-category="Fantasy">
+          <div class="product-card " data-genre="GraphicNovel-Fantasy">
             <img
               class="product-image"
               src="bimg/graphic/Priya's Shakti.jpg"
@@ -819,7 +878,7 @@
             </div>
           </div>
           <!-- Sci-Fi -->
-          <div class="product-card product-card-4" data-category="Sci-Fi">
+          <div class="product-card " data-genre="GraphicNovel-ScienceFiction">
             <img
               class="product-image"
               src="bimg/graphic/Saga.jpg"
@@ -836,7 +895,7 @@
             </div>
           </div>
           <!-- Dramma -->
-          <div class="product-card product-card-4" data-category="Drama">
+          <div class="product-card " data-genre="GraphicNovel-Drama">
             <img
               class="product-image"
               src="bimg/graphic/Blankets.jpg"
@@ -853,7 +912,7 @@
             </div>
           </div>
           <!-- Horror -->
-          <div class="product-card product-card-4" data-category="Horror">
+          <div class="product-card " data-genre="GraphicNovel-Horror">
             <img
               class="product-image"
               src="bimg/graphic/Locke & Key.jpg"
@@ -870,7 +929,7 @@
             </div>
           </div>
           <!-- Biographical -->
-          <div class="product-card product-card-4" data-category="Biographical">
+          <div class="product-card " data-genre="GraphicNovel-Biographical">
             <img
               class="product-image"
               src="bimg/graphic/Chanakya.jpg"
@@ -887,7 +946,7 @@
             </div>
           </div>
           <!-- Comedy -->
-          <div class="product-card product-card-4" data-category="Comedy">
+          <div class="product-card " data-genre="GraphicNovel-Comedy">
             <img
               class="product-image"
               src="bimg/graphic/Tinkle Single Digest.jpg"
@@ -904,7 +963,7 @@
             </div>
           </div>
           <!-- 2nd Round -->
-          <div class="product-card product-card-4" data-category="Superhero">
+          <div class="product-card " data-genre="GraphicNovel-SuperHero">
             <img
               class="product-image"
               src="bimg/graphic/Watchman.jpg"
@@ -920,7 +979,7 @@
               <a href="https://amzn.to/405noBs">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card product-card-4" data-category="Manga">
+          <div class="product-card " data-genre="GraphicNovel-Manga">
             <img
               class="product-image"
               src="bimg/graphic/Death Note.jpg"
@@ -936,7 +995,7 @@
               <a href="https://amzn.to/41N9epU">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card product-card-4" data-category="Fantasy">
+          <div class="product-card " data-genre="GraphicNovel-Fantasy">
             <img
               class="product-image"
               src="bimg/graphic/Amulet.jpg"
@@ -952,7 +1011,7 @@
               <a href="https://amzn.to/49THMsv">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card product-card-4" data-category="Biographical">
+          <div class="product-card " data-genre="GraphicNovel-Biographical">
             <img
               class="product-image"
               src="bimg/graphic/Maus.jpg"
@@ -968,7 +1027,7 @@
               <a href="https://amzn.to/41MzvVl">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card product-card-4" data-category="Comedy">
+          <div class="product-card " data-genre="GraphicNovel-Comedy">
             <img
               class="product-image"
               src="bimg/graphic/Scott Pilgrim.jpg"
@@ -984,26 +1043,11 @@
               <a href="https://amzn.to/3ZUOnP4">Click to Shop</a>
             </div>
           </div>
-        </div>
-        <button id="load-more-4" class="load-more product-card-4">
-          More Books...
-        </button>
         <!-- /* Plays */ -->
-        <div id="Plays" class="category-custom">Plays</div>
-        <div class="pro-categories pro-categories-5">
-          <button class="active" onclick="filterProducts5('all-5')">All</button>
-          <button onclick="filterProducts5('Tragedy')">Tragedy</button>
-          <button onclick="filterProducts5('Comedy')">Comedy</button>
-          <button onclick="filterProducts5('Drama')">Drama</button>
-          <button onclick="filterProducts5('Tragicomedy')">Tragicomedy</button>
-          <button onclick="filterProducts5('Historical')">Historical</button>
-          <button onclick="filterProducts5('Musical')">Musical</button>
-          <button onclick="filterProducts5('Absurdist')">Absurdist</button>
-          <button onclick="filterProducts5('Morality')">Morality</button>
-        </div>
-        <div class="product-grid product-grid-5">
+        
+        
           <!-- Tragedy -->
-          <div class="product-card product-card-5" data-category="Tragedy">
+          <div class="product-card " data-genre="Plays-Tragedy">
             <img
               class="product-image"
               src="bimg/play/Hamlet.jpg"
@@ -1020,7 +1064,7 @@
             </div>
           </div>
           <!-- Comedy -->
-          <div class="product-card product-card-5" data-category="Comedy">
+          <div class="product-card " data-genre="Plays-Comedy">
             <img
               class="product-image"
               src="bimg/play/A Midsummer Night's Dream.jpg"
@@ -1037,7 +1081,7 @@
             </div>
           </div>
           <!-- Drama -->
-          <div class="product-card product-card-5" data-category="Drama">
+          <div class="product-card " data-genre="Plays-Drama">
             <img
               class="product-image"
               src="bimg/play/Death of A Salesman.jpg"
@@ -1054,7 +1098,7 @@
             </div>
           </div>
           <!-- Tragicomedy -->
-          <div class="product-card product-card-5" data-category="Tragicomedy">
+          <div class="product-card " data-genre="Plays-Tragicomedy">
             <img
               class="product-image"
               src="bimg/play/The Winter's Tale.jpg"
@@ -1071,7 +1115,7 @@
             </div>
           </div>
           <!-- Historical -->
-          <div class="product-card product-card-5" data-category="Historical">
+          <div class="product-card " data-genre="Plays-Historical">
             <img
               class="product-image"
               src="bimg/play/GIRISH KARNAD.jpg"
@@ -1088,7 +1132,7 @@
             </div>
           </div>
           <!-- Musical -->
-          <div class="product-card product-card-5" data-category="Musical">
+          <div class="product-card " data-genre="Plays-Musical">
             <img
               class="product-image"
               src="bimg/play/Les Miserables.jpg"
@@ -1105,7 +1149,7 @@
             </div>
           </div>
           <!-- Absurdist -->
-          <div class="product-card product-card-5" data-category="Absurdist">
+          <div class="product-card " data-genre="Plays-Absurdist">
             <img
               class="product-image"
               src="bimg/play/Rosencrantz and Guidenstern are Dead.jpg"
@@ -1121,7 +1165,7 @@
             </div>
           </div>
           <!-- Morality -->
-          <div class="product-card product-card-5" data-category="Morality">
+          <div class="product-card " data-genre="Plays-Morality">
             <img
               class="product-image"
               src="bimg/play/Everyman.jpg"
@@ -1138,7 +1182,7 @@
             </div>
           </div>
           <!-- 2nd Round -->
-          <div class="product-card product-card-5" data-category="Tragedy">
+          <div class="product-card " data-genre="Plays-Tragedy">
             <img
               class="product-image"
               src="bimg/play/Oedipus Rex.jpg"
@@ -1154,7 +1198,7 @@
               <a href="https://amzn.to/3VL8Mo7">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card product-card-5" data-category="Comedy">
+          <div class="product-card " data-genre="Plays-Comedy">
             <img
               class="product-image"
               src="bimg/play/The Importance of Being Earnest.jpg"
@@ -1170,7 +1214,7 @@
               <a href="https://amzn.to/4iOLDep">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card product-card-5" data-category="Drama">
+          <div class="product-card " data-genre="Plays-Drama">
             <img
               class="product-image"
               src="bimg/play/A Doll's House.jpg"
@@ -1186,7 +1230,7 @@
               <a href="https://amzn.to/4iKT6vb">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card product-card-5" data-category="Tragicomedy">
+          <div class="product-card " data-genre="Plays-Tragicomedy">
             <img
               class="product-image"
               src="bimg/play/Waiting For a Godat.jpg"
@@ -1202,7 +1246,7 @@
               <a href="https://amzn.to/4gON9eH">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card product-card-5" data-category="Historical">
+          <div class="product-card " data-genre="Plays-Historical">
             <img
               class="product-image"
               src="bimg/play/Julius Caesar.jpg"
@@ -1218,7 +1262,7 @@
               <a href="https://amzn.to/3ZQICBG">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card product-card-5" data-category="Musical">
+          <div class="product-card " data-genre="Plays-Musical">
             <img
               class="product-image"
               src="bimg/play/Phantom of the Opera.jpg"
@@ -1234,7 +1278,7 @@
               <a href="https://amzn.to/3P6HDZe">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card product-card-5" data-category="Absurdist">
+          <div class="product-card " data-genre="Plays-Absurdist">
             <img
               class="product-image"
               src="bimg/play/The Bald Soprano.jpg"
@@ -1250,7 +1294,7 @@
               <a href="https://amzn.to/3BPhc7d">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card product-card-5" data-category="Morality">
+          <div class="product-card " data-genre="Plays-Morality">
             <img
               class="product-image"
               src="bimg/play/The Piligrims Progress.jpg"
@@ -1267,7 +1311,7 @@
             </div>
           </div>
           <!-- 3rd Round -->
-          <div class="product-card product-card-5" data-category="Tragedy">
+          <div class="product-card " data-genre="Plays-Tragedy">
             <img
               class="product-image"
               src="bimg/play/The post office.jpg"
@@ -1283,7 +1327,7 @@
               <a href="https://amzn.to/3BveovY">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card product-card-5" data-category="Comedy">
+          <div class="product-card " data-genre="Plays-Comedy">
             <img
               class="product-image"
               src="bimg/play/Noises Off.jpg"
@@ -1299,7 +1343,7 @@
               <a href="https://amzn.to/4fu5JIi">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card product-card-5" data-category="Drama">
+          <div class="product-card " data-genre="Plays-Drama">
             <img
               class="product-image"
               src="bimg/play/Silence! The Court is in Session.jpg"
@@ -1315,7 +1359,7 @@
               <a href="https://amzn.to/3VIRSH0">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card product-card-5" data-category="Morality">
+          <div class="product-card " data-genre="Plays-Morality">
             <img
               class="product-image"
               src="bimg/play/From Valley to Mountain.jpg"
@@ -1331,7 +1375,7 @@
               <a href="https://amzn.to/4iOLU0V">Click to Shop</a>
             </div>
           </div>
-          <div class="product-card product-card-5" data-category="Historical">
+          <div class="product-card " data-genre="Plays-Historical">
             <img
               class="product-image"
               src="bimg/play/A Man for All Seasons.jpg"
@@ -1347,16 +1391,22 @@
               <a href="https://amzn.to/404emVl">Click to Shop</a>
             </div>
           </div>
+
         </div>
-        <button id="load-more-5" class="load-more product-card-5">
-          More Books...
-        </button>
+        <!-- pagination -->
+        <div class="pagination">
+          <button id="prevBtn">Previous</button>
+          <div id="pageNumbers"></div>
+          <button id="nextBtn">Next</button>
+        </div>
       </div>
+      
     </section>
 
-    <!-- Back-to-Top Button -->
-    <button id="backToTop" aria-label="Back to Top">&#8593;</button>
 
+    <!-- Back-to-Top Button -->
+    <button id="backToTop" aria-label="Back to Top"><i class="fa fa-arrow-up"></i></button>
+    
     <!-- About Us Section -->
     <section id="about" class="container mt-5">
       <h1 class="text-center mb-4 animate">About Us</h1>
@@ -1406,6 +1456,8 @@
         </div>
       </div>
     </section>
+
+
     <div class="footer-connect animate">
       <h3>Connect With Us</h3>
       <p>
@@ -1424,13 +1476,19 @@
         <div class="footer-container">
           <!-- Language and Location -->
           <div class="footer-top">
-            <div class="language">
-              <i class="fa-solid fa-globe"></i> English
-              <i class="fa-solid fa-caret-down"></i>
-            </div>
+            
             <div class="location">
               <i class="fa-solid fa-map-marker-alt"></i> India
             </div>
+            <!-- <div class="location">
+              <i class="fa-solid fa-map-marker-alt"></i> 
+              <select id="locationSelect" onchange="redirectToLocation()">
+                <option value="india.html">India</option>
+                <option value="usa.html">USA</option>
+                <option value="uk.html">UK</option>
+                <option value="care.html">Canada</option>
+              </select>
+            </div> -->
           </div>
 
           <!-- Social Media Links -->
@@ -1454,15 +1512,22 @@
             <img src="himg/logo1.png" alt="3MADZ Logo" />
           </div>
         </div>
+        <p class="copyright">
+          &copy; <span id="year"></span> 3MADZ. All Rights Reserved.
+        </p>
       </div>
     </section>
 
     <!-- Bootstrap JS and Popper -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
+    <!-- Font Awesome Icon Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
     <!-- JavaScript for Animations -->
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="script.js"></script>
     <script src="product.js"></script>
+    <script src="filter.js"></script>
   </body>
 </html>
